@@ -5,10 +5,12 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #f77e7e00; */
+  background-color: #fff8ee;
+  background-image:url('https://p.sda1.dev/2/3c8b22d30fdfd19ffab772588135a9c5/bg.png');
+  background-repeat:no-repeat;
   list-style: none;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
 }
 
 .container{
@@ -21,7 +23,7 @@ body{
   width: 240px;
   height: 80px;
   border: none;
-  background-color: #ec525e;
+  background-color: #FE8F8F;
   color: #fff;
   font-size: 18px;
   border-radius: 6px;
@@ -31,23 +33,28 @@ body{
 }
 
 .btn1:hover{
-  transform: rotateX(15deg);
-  box-shadow: 0 15px 15px #e15f4190;
+  transform: rotateX(5deg);
+  box-shadow: 0 15px 15px #ffaeae;
 }
 
 .btn2:hover{
-  transform: rotateX(-15deg);
-  box-shadow: 0 -15px 15px #e15f4190;
+  transform: rotateX(5deg);
+  box-shadow: 0 15px 15px #ffaeae;
 }
 
 .btn3:hover{
-  transform: rotateY(15deg);
-  box-shadow: -15px 0px 15px #e15f4190;
+  transform: rotateX(5deg);
+  box-shadow: 0 15px 15px #ffaeae;
 }
 
 .btn4:hover{
-  transform: rotateY(-15deg);
-  box-shadow: 15px 0 15px #e15f4190;
+  transform: rotateX(5deg);
+  box-shadow: 0 15px 15px #ffaeae;
+}
+
+.btn5:hover{
+  transform: rotateX(5deg);
+  box-shadow: 0 15px 15px #ffaeae;
 }
 
 
@@ -58,16 +65,16 @@ body{
   left: -250px;
   width: 250px;
   height: 100%;
-  background: #fd94b7;
+  background: #fe8f8f8a;
   transition: all .5s ease;
 }
 
-.sidebar header{
-  font-size: 22px;
+.sidebar h3{
+  font-size: 20px;
   color: white;
   text-align: center;
   line-height: 70px;
-  background: #e02e69;
+  background: #fe8f8f8a;
   user-select: none;
 }
 
@@ -76,13 +83,15 @@ body{
   height: 100%;
   width: 100%;
   line-height: 65px;
-  font-size: 20px;
+  font-size: 17px;
+  
   color: white;
   padding-left: 40px;
   box-sizing: border-box;
   border-top: 1px solid rgba(255,255,255,.1);
-  border-bottom: 1px solid rgb(34, 2, 5);
+  border-bottom: 1px solid #fff1f1;
   translation: .4s;
+  
 }
 
 ul li:hover a{
@@ -101,7 +110,7 @@ ul li:hover a{
 label #btn,label #cancel{
   position: absolute;
   cursor: pointer;
-  background: #ff6492;
+  background: #FE8F8F;
   border-radius: 3px;
 }
 
@@ -142,3 +151,6 @@ label #cancel{
   margin-left: 250px;
 }
 
+.sidebar ul a i:before{
+  content: "\f105";
+}
