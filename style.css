@@ -67,7 +67,7 @@ body{
   color: white;
   text-align: center;
   line-height: 70px;
-  background: #cf1d59;
+  background: #e02e69;
   user-select: none;
 }
 
@@ -142,10 +142,3 @@ label #cancel{
   margin-left: 250px;
 }
 
-section{
-  background: url(https://p.sda1.dev/2/94597382b2d88bef60f593444f77ba59/bg.png) no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  transition: all .5s;
-}
