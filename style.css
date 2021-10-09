@@ -5,7 +5,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
+  /* background-color: #f77e7e00; */
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
 .container{
@@ -18,7 +21,7 @@ body{
   width: 240px;
   height: 80px;
   border: none;
-  background-color: #e15f41;
+  background-color: #ec525e;
   color: #fff;
   font-size: 18px;
   border-radius: 6px;
@@ -55,7 +58,7 @@ body{
   left: -250px;
   width: 250px;
   height: 100%;
-  background: #042331;
+  background: #81183b;
   transition: all .5s ease;
 }
 
@@ -64,7 +67,7 @@ body{
   color: white;
   text-align: center;
   line-height: 70px;
-  background: #063146;
+  background: #cf1d59;
   user-select: none;
 }
 
@@ -78,7 +81,7 @@ body{
   padding-left: 40px;
   box-sizing: border-box;
   border-top: 1px solid rgba(255,255,255,.1);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(34, 2, 5);
   translation: .4s;
 }
 
@@ -98,7 +101,7 @@ ul li:hover a{
 label #btn,label #cancel{
   position: absolute;
   cursor: pointer;
-  background: #042331;
+  background: #ff6492;
   border-radius: 3px;
 }
 
@@ -116,7 +119,7 @@ label #cancel{
   left: -195px;
   top: 17px;
   font-size:30px;
-  color: #0a5275;
+  color: #ff7d9d;
   padding: 4px 9px;
   transition: all .5s ease;
 }
@@ -140,7 +143,7 @@ label #cancel{
 }
 
 section{
-  background: url(https://code.5g-o.com/wp-content/uploads/2020/10/img-2.jpeg) no-repeat;
+  background: url(https://p.sda1.dev/2/94597382b2d88bef60f593444f77ba59/bg.png) no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
