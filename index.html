@@ -1,42 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  
-  <link rel="stylesheet" href="https://code.5g-o.com/wp-content/uploads/2020/11/style-1.css">
-  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.css">
-    <!-- 引用有问题吗 没有问题 至于为什么上传不上 那就需要github反思一下-->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <button class="btn btn1">用来记录看过的条目</button>
-    <button class="btn btn2">数据还没爬</button>
-    <button class="btn btn3">只能等爬完数据</button>
-    <button class="btn btn4">再填充了</button>
-    <button class="btn btn5">test</button>
-  </div>
-
-  <input type="checkbox" id="check">
-  <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-  </label>
-  <div class="sidebar">
-      <h3>从0建站第一天</h3>
-      <ul>
-          <li><a href="#"><i class="fas fa-qrcode"></i>这边的</a></li>
-          <li><a href="#"><i class="fas fa-link"></i>font awesome</a></li>
-          <li><a href="#"><i class="fas fa-stream"></i>的before icon</a></li>
-          <li><a href="#"><i class="fas fa-calendar-week"></i>经常有两个</a></li>
-          <li><a href="#"><i class="far fa-question-circle"></i>显示不出来</a></li>
-          <li><a href="#"><i class="fas fa-sliders-h"></i>都是i标签</a></li>
-          <li><a href="#"><i class="far fa-envelope"></i>不知道为什么消失</a></li>
-      </ul>
-  </div>
-  
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <!-- <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">ライブラリの選択</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">install tensorflow</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Kerasによる基本を試してみた</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">pythonのversion一致しない</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Generative(生成)</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">来週までに</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-0">
+                        Pytorch / tensorflow
+                    </h2>
+                    <div class="subheading mb-5">
+                        <div>違いはあまりない、2021年の新データでも両方の発展も同じ</div>
+                        <br>
+                        <img src="https://p.sda1.dev/2/cafc8d69748d1ba09290b557980b06f0/QQ20211021-131552@2x.png" 
+                         height="996"/>
+                    </div>
+                    <p class="lead mb-5">1.tensorflowの作用素(operator)が多い、提供されるpython APIは8000以上</p>
+                    <p class="lead mb-5">2.先生が使ったことがある</p>
+                    <p class="lead mb-5">3.中国語のreferenceがあったのでtensorflowを使うことに</p>
+                    <!-- <div class="social-icons">
+                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    </div> -->
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h3 class="mb-5">tensorflowをインストールする</h3>
+                    <img src="https://p.sda1.dev/2/4cf11389c9f34aff2ab0ce8779ea00c6/11AEB49E25EAC2AFB15638738EAD0420.jpg" alt="avatar"  >
+                    <p class="lead mb-5">Python 3.6～3.9、pip 19.0 以降が必要</p>
+                    <p class="lead mb-5">より新しいバージョンの pip が必要</p>
+                    <img src="https://p.sda1.dev/2/38e7a9930601d226bbabbd48d8f632c3/QQ20211021-135156@2x.png" />
+                    <br>
+                    <a class="lead mb-5" href="https://www.tensorflow.org/install/pip#conda" target="_blank">公式サイトによるとTensorFlow が提供する pip パッケージをおすすめします</a>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        
+                        <!-- <div class="flex-grow-1">
+                            <h3 class="mb-0">Senior Web Developer</h3>
+                            <div class="subheading mb-3">Intelitec Solutions</div>
+                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Web Developer</h3>
+                            <div class="subheading mb-3">Intelitec Solutions</div>
+                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Junior Web Designer</h3>
+                            <div class="subheading mb-3">Shout! Media Productions</div>
+                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between"> -->
+                        <!-- <div class="flex-grow-1">
+                            <h3 class="mb-0">Web Design Intern</h3>
+                            <div class="subheading mb-3">Shout! Media Productions</div>
+                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div> -->
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h3 class="mb-5">Keras:TensorFlowのモデルを構築し訓練するためのハイレベルのAPI</h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <!-- <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Colorado Boulder</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Computer Science - Web Development Track</div>
+                            <p>GPA: 3.23</p>
+                        </div> -->
+                        <img src="https://p.sda1.dev/2/cdc596909fe0b92ee61b943b7a077222/0AE9218EA4D47F36F0AE3529B9072E1B.jpg" alt="avatar">
+                        <div class="flex-shrink-0"><span class="text-primary">AttributeError</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <!-- <div class="flex-grow-1">
+                            <h3 class="mb-0">James Buchanan High School</h3>
+                            <div class="subheading mb-3">Technology Magnet Program</div>
+                            <p>GPA: 3.56</p>
+                        </div> -->
+                        <img src="https://p.sda1.dev/2/f4111be011edb8fbed73d39861289c44/D9F8496CBC6F4EB57573C30A6A074475.jpg" alt="avatar">
+                        <div class="flex-shrink-0"><span class="text-primary">jupyterではerrorなし</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <!-- <h3 class="mb-5">Skills</h3> -->
+                    <div class="subheading mb-3">anacondaは更新されてない、jupyter notebookとspyderのpythonバージョンも異なる
+                    </div>
+                    <!-- <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul> -->
+                    <div class="subheading mb-3">何度か試した後</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <img src="https://p.sda1.dev/2/38923b47bb06150db30333c88e4af28f/QQ20211020-233731@2x.png" alt="avatar">
+                            <!-- <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design -->
+                        </li>
+                        <br>
+                        
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            元の環境をuninstallして、tensorflowを再インストールする
+                        </li>
+                        <br>
+                        <li>
+                            <img src="https://p.sda1.dev/2/76a0ab82f91144acb69065f813504911/QQ20211021-000628@2x.png" alt="avatar">
+                            <!-- <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams -->
+                        </li>
+                        <br>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            それぞれの設定は問題ない
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Neural style transfer</h2>
+                    <h4 class="mb-4">ニューラルスタイルの転送</h4>
+                   
+                    <a href="https://hub.tensorflow.google.cn/" target="_blank">→install tensorflow_hub</a>
+                    <br>
+                    <br>
+                    <img src="https://p.sda1.dev/2/5be18504083194002cc8bc44d9266659/0A3B178C-DD30-4EB5-924B-CBCBF0B706BA.png" />
+                    <br>
+                    <br>
+                    
+                    <img src="https://p.sda1.dev/2/68924ae3c4820a5eb266e0c6833a7fc9/QQ20211021-155425@2x.png" />
+                    <img src="https://p.sda1.dev/2/097a74b6d95a7e6fc389ef72806dbed3/QQ20211021-155345@2x.png" />
+                    
+                    <p>目前就搞了这么多 换图也没搞明白 他那个本地库在哪我也不知道 啥也不是</p>
+                    <p class="mb-0">mark</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <!-- <h2 class="mb-5">Awards & Certifications</h2> -->
+                    <img src="https://p.sda1.dev/2/c0015848652f88f6e889eb23df30d4fa/C2CBF9C1-2827-44AC-A5B9-67FC627025D2.png" />
+                    <br>
+                    <br>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            半分以上何をしているのかわからない
+                        </li>
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            自分で使うことも モデルを構築することもできない
+                        </li>
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            dataに画像をアップロードしてみる
+                            <sup></sup>
+                            
+                        </li>
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            
+                            <sup></sup>
+                            mlの流れを理解してみる
+                        </li>
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            
+                            <sup></sup>
+                            
+                            <a href="https://tensorflow.google.cn/tutorials/generative/pix2pix" target="_blank">自分の役に立つGenerative project/exampleを見る</a>
+                        </li>
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            
+                            <sup></sup>
+                            
+                        </li>
+                        <li>
+                            <!-- <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span> -->
+                            
+                            <sup></sup>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
