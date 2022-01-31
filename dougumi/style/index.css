@@ -347,7 +347,6 @@
     margin-top: 10px;
     font-size: 2em;
     padding: 5px 0;
-    max-height: 48px;
     overflow: hidden;
     line-height: 24px;
     color: #141414;
@@ -357,7 +356,6 @@
 .waterfull ul li .title-ch {
     font-size: 1em;
     padding: 5px 0;
-    max-height: 48px;
     overflow: hidden;
     line-height: 20px;
     color: #999999;
