@@ -19,9 +19,9 @@
     <script type="text/javascript" src="js/jQeasing.js"></script>
     <script type="text/javascript">
         /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	masonry还有很多参数我这里注解了常用的参数
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	masonry还有很多参数我这里注解了常用的参数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */
         $(function() {
             /*瀑布流开始*/
             var container = $('.waterfull ul');
@@ -60,6 +60,54 @@
             });
             /*模拟从后台获取到的数据*/
             var sqlJson = [{
+                    'src': '	doubanimg/30148173.jpg	 ',
+                    'title': '	你微笑时很美	  ',
+                    'namech': '	你微笑时很美	 ',
+                    'date': '	2021-07-03	 ',
+                    'intro': '	我可以忍抄袭融梗圈外人士YY电竞，你拿脚打我都能忍。可是这女主上来就骂队友“怎么这么菜啊”，人设会不会太失败了？而且和前男友感情戏的设定让人非常不爽，一个电竞外壳已经稀烂的剧，恋爱内核也很屎。对和前男友的异地恋没有任何规划和两个人对相处方式的摸索，初来乍到就对队友祖安发言，对感情放任自流事不关己，什么狗鸡巴女主啊？	 '
+                }, {
+                    'src': '	doubanimg/5392061.jpg	 ',
+                    'title': '	楚留香新传	  ',
+                    'namech': '	楚留香新传	 ',
+                    'date': '	2021-05-31	 ',
+                    'intro': '	/ep15石绣云真的太好了 天使 我辈楷模 暗恋之鉴 自知之明自尊自爱的标杆 值得学习 非常非常非常招人喜欢的角色 与君长决的那段戏看了两遍 直接落泪//金灵芝胡铁花cp贼烂 呸 东三娘大大大//桃花传奇真jb土//除了最后一个故事之外都挺好的 最后哪怕交代一个胡铁花的镜头呢 啥都无 唉	 '
+                }, {
+                    'src': '	doubanimg/30483667.jpg	 ',
+                    'title': '	你是我的城池营垒	  ',
+                    'namech': '	你是我的城池营垒	 ',
+                    'date': '	2021-04-09	 ',
+                    'intro': '	我能看下去十有八九是缘于我对医生和警察这两个行业的陌生，根本一无所知，但依旧觉得一个一等功三个二等功离谱，先按下不表。记者和束文波陆风的线我很喜，是我觉得想在电视剧里看到的恋爱关系，女主这边显得太成熟太水到渠成，宛如照镜子，虽然真实但是无趣。//整部剧的恋爱中小甜点都设置的很舒服，纯谈恋爱的话节奏还是挺不错的。//说话太慢了我操，是不是录完之后减速放的，我平常二倍速看的没什么感觉，看了下原速这也太慢了//异国恋的部分不知道怎么说，又真实又做作，女主有点想太多，作为熬过三年异国恋未来还有两年要熬的亲历者来说觉得这段叙述和铺垫都有些潦草，男主总该是第一时间站在女主家人的立场思考这件事，而不是因为区区两年这种屁事自己先慌乱不已让女主动摇//最后女主这英勇形象塑造的有点不知深浅，行侠仗义不走脑。	 '
+                }, {
+                    'src': '	doubanimg/35051512.jpg	 ',
+                    'title': '	我和我的家乡	  ',
+                    'namech': '	我和我的家乡	 ',
+                    'date': '	2021-03-30	 ',
+                    'intro': '	草，看哭好几次……除了外星人那个感觉都很好看。	 '
+                }, {
+                    'src': '	doubanimg/1291546.jpg	 ',
+                    'title': '	霸王别姬	  ',
+                    'namech': '	霸王别姬	 ',
+                    'date': '	2020-12-25	 ',
+                    'intro': '	菊仙她好好	 '
+                }, {
+                    'src': '	doubanimg/2136210.jpg	 ',
+                    'title': '	陆小凤传奇之血衣之谜	  ',
+                    'namech': '	陆小凤传奇之血衣之谜	 ',
+                    'date': '	2020-11-11	 ',
+                    'intro': '	开头结尾多说一点，花满楼的每个镜头都值10分（bushi）前面虽然服化道粗陋的可以，设定又离谱但是起码能有个着眼点，后面剧情大部分都很鬼扯了，我还失去了花满楼（bushi）唉就王爷的女儿叫公主没人觉得有些僭越吗，赌场随随便便什么钱庄老板都能输60w，赎女儿拿不出1kw……有些角色蛮重要的死之前明明应该再铺垫铺垫比如大智大通结果就那么死了……女角色颜值忽高忽低，配音也挺烂的，各种乱七八糟的番邦小破国家小破组织插个叶当自己是根葱了……动不动就连皇上也扯进来跟陆小凤称兄道弟饮酒作乐也太没溜了。都说古龙的江湖小，我倒觉得流星蝴蝶剑那样就很不错，陆小凤这个说大不大说小还动不动就沾皇亲国戚50万御林军，实话实说没有必要// 10集作为一个整体故事的精巧有的但是合理性欠缺，6-8之间的分用花满楼补一补	 '
+                }, {
+                    'src': '	doubanimg/1968502.jpg	 ',
+                    'title': '	陆小凤传奇之大金鹏王	  ',
+                    'namech': '	陆小凤传奇之大金鹏王	 ',
+                    'date': '	2020-11-11	 ',
+                    'intro': '	上官飞燕这狗贼，放开那个花满楼🙄🙄🙄//当时看到一半给我难过坏了，那么好的男人，这么随便的就跟了一个来路不明的女人，还轻易就许诺天涯海角了，欺负人家是个瞎子又好人随便骗，太可怜了吧。。还好没多久就死了🤪	 '
+                }, {
+                    'src': '	doubanimg/2136208.jpg	 ',
+                    'title': '	陆小凤传奇之幽灵山庄	  ',
+                    'namech': '	陆小凤传奇之幽灵山庄	 ',
+                    'date': '	2020-11-11	 ',
+                    'intro': '	那个叶灵给我看尿了。。。我一边干别的一边看，冷不丁一抬头吓老子一跳。。。你那春药是真牛逼，但凡陆小凤有一点反抗能力都不能从了她。。	 '
+                }, {
                     'src': '	doubanimg/2136212.jpg	 ',
                     'title': '	陆小凤传奇之凤舞九天	  ',
                     'namech': '	陆小凤传奇之凤舞九天	 ',
@@ -3950,32 +3998,124 @@
 </head>
 
 <body>
-    <div class="pagetop"></div>
+    <div class="pagetop">
+        <div class="wrapper">
+            <nav>
+                <input type="radio" name="tab" id="home" checked>
+                <input type="radio" name="tab" id="comment">
+                <input type="radio" name="tab" id="envelope">
+                <input type="radio" name="tab" id="heart">
+                <input type="radio" name="tab" id="user">
+                <label for="home" class="home">
+                <a href="https://muccorz.github.io/dougumi/anime.html"><i class="fa fa-home" aria-hidden="true"></i>Anime</a>
+            </label>
+                <label for="comment" class="comment">
+                <a href="https://muccorz.github.io/dougumi/movie.html"><i class="fa fa-comment" aria-hidden="true"></i>Movie</a>
+            </label>
+                <label for="envelope" class="envelope">
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Music</a>
+            </label>
+                <label for="heart" class="heart">
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Game</a>
+            </label>
+                <label for="user" class="user">
+                <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Book</a>
+            </label>
+                <div class="tab"></div>
+            </nav>
+        </div>
+    </div>
     <div class="content">
         <!-- 瀑布流样式开始 -->
         <div class="waterfull clearfloat" id="waterfull">
             <ul>
                 <li class="item">
                     <a href="####" class="a-img">
-                        <img src="doubanimg/30148173.jpg" alt="">
+                        <img src="doubanimg/4135710.jpg" alt="">
 
                     </a>
-                    <h2 class="li-title" title="预显示">你微笑时很美</h2>
-                    <h2 class="title-ch" title="预显示">你微笑时很美</h2>
-                    <p class="description">我可以忍抄袭融梗圈外人士YY电竞，你拿脚打我都能忍。可是这女主上来就骂队友“怎么这么菜啊”，人设会不会太失败了？而且和前男友感情戏的设定让人非常不爽，一个电竞外壳已经稀烂的剧，恋爱内核也很屎。对和前男友的异地恋没有任何规划和两个人对相处方式的摸索，初来乍到就对队友祖安发言，对感情放任自流事不关己，什么狗鸡巴女主啊？</p>
+                    <h2 class="li-title" title="预显示">Hello！树先生</h2>
+                    <h2 class="title-ch" title="预显示">Mr. Tree</h2>
+                    <p class="description">最后疯了的那段到底哪部分是现实哪部分是表现手法看的有点云里雾里的 看了这个才知道外边人多哥给你跪下了是从这出的圈 另外那个媳妇是真主动真涩情啊x</p>
                     <div class="qianm clearfloat">
-                        <span class="sp1">2021-07-03</span>
+                        <span class="sp1">2022-01-24</span>
 
                     </div>
                 </li>
                 <li class="item">
                     <a href="####" class="a-img">
-                        <img src="doubanimg/5392061.jpg" alt="">
+                        <img src="doubanimg/2373195.jpg" alt="">
 
                     </a>
-                    <h2 class="li-title" title="预显示">楚留香新传</h2>
-                    <h2 class="title-ch" title="预显示">楚留香新传</h2>
-                    <p class="description">/ep15石绣云真的太好了 天使 我辈楷模 暗恋之鉴 自知之明自尊自爱的标杆 值得学习 非常非常非常招人喜欢的角色 与君长决的那段戏看了两遍 直接落泪//金灵芝胡铁花cp贼烂 呸 东三娘大大大//桃花传奇真jb土//除了最后一个故事之外都挺好的 最后哪怕交代一个胡铁花的镜头呢 啥都无 唉</p>
+                    <h2 class="li-title" title="预显示">绝命毒师 第一季</h2>
+                    <h2 class="title-ch" title="预显示">Breaking Bad Season 1</h2>
+                    <p class="description">掉头发看得我痛哭流涕 对小伙伴家庭的刻画感觉很大伏笔。。但是第一部感觉还停在一个有点虎头蛇尾的地方没干出什么大事业 跟我预期的大毒枭差距也太大了xx</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1">2021-12-30</span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="doubanimg/3053521.jpg" alt="">
+
+                    </a>
+                    <h2 class="li-title" title="预显示">二十四城记</h2>
+                    <h2 class="title-ch" title="预显示">24 City</h2>
+                    <p class="description">我也没想到我有机会在日本看到学校放这片，不是学校安排我这辈子应该都不会看到这电影……内容比上次那个上大b当的猴子要好一些，整体看下来还是我们东北真是太惨啦（。）内容是好内容，但是搞专业演员还都是大佬来演，很没有纪录片的真实感。豆瓣有一句说的很好：越老的工人越在维护这个体制，绝不是他对这个体制没有反省，没有批判，而是他很难背叛他过去青春的选择。</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1">2021-10-05</span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="doubanimg/34812928.jpg" alt="">
+
+                    </a>
+                    <h2 class="li-title" title="预显示">鱿鱼游戏</h2>
+                    <h2 class="title-ch" title="预显示">오징어 게임</h2>
+                    <p class="description">一口气激情五集//这最后给我气的脑瓜子嗡嗡的 跟我看刀剑神域的时候有一拼</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1">2021-09-30</span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="doubanimg/351026.jpg" alt="">
+
+                    </a>
+                    <h2 class="li-title" title="预显示">讲故事的人</h2>
+                    <h2 class="title-ch" title="预显示">うたうひと</h2>
+                    <p class="description">这电影全是日本东北方言 上课老师组织看的 看完让讨论 我是狗屁没听懂 结果日本人也听不懂 跟我一样除了猴子让人坑了啥也不知道 午休回来前面的兄弟还在睡着这电影后劲真的大 主要是学一个拍摄手法没必要搞我们两个点吧……呜呜呜呜上大当了</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1">2021-09-28</span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="doubanimg/2623884456.jpg" alt="">
+
+                    </a>
+                    <h2 class="li-title" title="预显示">扫黑风暴</h2>
+                    <h2 class="title-ch" title="预显示">Crime Crackdown</h2>
+                    <p class="description">我又来看张艺兴了 演的还行就是声音…//贺芸这角色不太行 演员是感觉自己是偶像派吗咬字如含屎……送审版和正式版那配音一改 拉着孙兴去自首那戏看着更别扭了//点名道姓那个贺云台词就是屎
+                    </p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1">2021-09-01</span>
+
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="doubanimg/1433736.jpg" alt="">
+
+                    </a>
+                    <h2 class="li-title" title="预显示">古惑仔之人在江湖</h2>
+                    <h2 class="title-ch" title="预显示">英雄不败(台) / Young and Dangerous</h2>
+                    <p class="description">这片子竟然比我还大一岁 剧情都是意料之中的合理展开 主要是来看郑伊健 谁不喜欢看帅哥透批呢//另外之前看过黎姿cut 我以为小结巴是傻白甜圈外人 想到陈浩南和那种大小姐乖乖女类型的cp横冲直撞狂喜乱舞就冲来看 结果并不 唉</p>
                     <div class="qianm clearfloat">
                         <span class="sp1">2021-05-31</span>
 
@@ -3983,81 +4123,14 @@
                 </li>
                 <li class="item">
                     <a href="####" class="a-img">
-                        <img src="doubanimg/30483667.jpg" alt="">
+                        <img src="doubanimg/30170894.jpg" alt="">
 
                     </a>
-                    <h2 class="li-title" title="预显示">你是我的城池营垒</h2>
-                    <h2 class="title-ch" title="预显示">你是我的城池营垒</h2>
-                    <p class="description">我能看下去十有八九是缘于我对医生和警察这两个行业的陌生，根本一无所知，但依旧觉得一个一等功三个二等功离谱，先按下不表。记者和束文波陆风的线我很喜，是我觉得想在电视剧里看到的恋爱关系，女主这边显得太成熟太水到渠成，宛如照镜子，虽然真实但是无趣。//整部剧的恋爱中小甜点都设置的很舒服，纯谈恋爱的话节奏还是挺不错的。//说话太慢了我操，是不是录完之后减速放的，我平常二倍速看的没什么感觉，看了下原速这也太慢了//异国恋的部分不知道怎么说，又真实又做作，女主有点想太多，作为熬过三年异国恋未来还有两年要熬的亲历者来说觉得这段叙述和铺垫都有些潦草，男主总该是第一时间站在女主家人的立场思考这件事，而不是因为区区两年这种屁事自己先慌乱不已让女主动摇//最后女主这英勇形象塑造的有点不知深浅，行侠仗义不走脑。</p>
+                    <h2 class="li-title" title="预显示">大宋少年志</h2>
+                    <h2 class="title-ch" title="预显示">大宋少年天团</h2>
+                    <p class="description">被豆瓣恶心疯了标bgm了(hhh这句写的时候是去年四月份 当时就萌生了自己建站随便写的想法 终于在现在2022年1月底实现了)//30集之后这郡主就是个大sb//33开始怎么疯狂搞对象……//看到35不太行了 最后搞对象这个章节狗尾续貂 赵简爹和开头那个把赵简逼得没有退路“您当没有我这个女儿”的形象差距太大 而且三条线非常散乱 男主完全没有案情参与度 菜市场闹事和相亲线发挥不大就罢了 哥哥线也放任自流了 感觉是在拖进度圈钱</p>
                     <div class="qianm clearfloat">
                         <span class="sp1">2021-04-09</span>
-
-                    </div>
-                </li>
-                <li class="item">
-                    <a href="####" class="a-img">
-                        <img src="doubanimg/35051512.jpg" alt="">
-
-                    </a>
-                    <h2 class="li-title" title="预显示">我和我的家乡</h2>
-                    <h2 class="title-ch" title="预显示">我和我的家乡</h2>
-                    <p class="description">草，看哭好几次……除了外星人那个感觉都很好看。</p>
-                    <div class="qianm clearfloat">
-                        <span class="sp1">2021-03-30</span>
-
-                    </div>
-                </li>
-                <li class="item">
-                    <a href="####" class="a-img">
-                        <img src="doubanimg/1291546.jpg" alt="">
-
-                    </a>
-                    <h2 class="li-title" title="预显示">霸王别姬</h2>
-                    <h2 class="title-ch" title="预显示">霸王别姬</h2>
-                    <p class="description">菊仙她好好</p>
-                    <div class="qianm clearfloat">
-                        <span class="sp1">2020-12-25</span>
-
-                    </div>
-                </li>
-                <li class="item">
-                    <a href="####" class="a-img">
-                        <img src="doubanimg/2136210.jpg" alt="">
-
-                    </a>
-                    <h2 class="li-title" title="预显示">陆小凤传奇之血衣之谜</h2>
-                    <h2 class="title-ch" title="预显示">陆小凤传奇之血衣之谜</h2>
-                    <p class="description">开头结尾多说一点，花满楼的每个镜头都值10分（bushi）前面虽然服化道粗陋的可以，设定又离谱但是起码能有个着眼点，后面剧情大部分都很鬼扯了，我还失去了花满楼（bushi）唉就王爷的女儿叫公主没人觉得有些僭越吗，赌场随随便便什么钱庄老板都能输60w，赎女儿拿不出1kw……有些角色蛮重要的死之前明明应该再铺垫铺垫比如大智大通结果就那么死了……女角色颜值忽高忽低，配音也挺烂的，各种乱七八糟的番邦小破国家小破组织插个叶当自己是根葱了……动不动就连皇上也扯进来跟陆小凤称兄道弟饮酒作乐也太没溜了。都说古龙的江湖小，我倒觉得流星蝴蝶剑那样就很不错，陆小凤这个说大不大说小还动不动就沾皇亲国戚50万御林军，实话实说没有必要//
-                        10集作为一个整体故事的精巧有的但是合理性欠缺，6-8之间的分用花满楼补一补
-                    </p>
-                    <div class="qianm clearfloat">
-                        <span class="sp1">2020-11-11</span>
-
-                    </div>
-                </li>
-                <li class="item">
-                    <a href="####" class="a-img">
-                        <img src="doubanimg/1968502.jpg" alt="">
-
-                    </a>
-                    <h2 class="li-title" title="预显示">陆小凤传奇之大金鹏王</h2>
-                    <h2 class="title-ch" title="预显示">陆小凤传奇之大金鹏王</h2>
-                    <p class="description">上官飞燕这狗贼，放开那个花满楼🙄🙄🙄//当时看到一半给我难过坏了，那么好的男人，这么随便的就跟了一个来路不明的女人，还轻易就许诺天涯海角了，欺负人家是个瞎子又好人随便骗，太可怜了吧。。还好没多久就死了🤪</p>
-                    <div class="qianm clearfloat">
-                        <span class="sp1">2020-11-11</span>
-
-                    </div>
-                </li>
-                <li class="item">
-                    <a href="####" class="a-img">
-                        <img src="doubanimg/2136208.jpg" alt="">
-
-                    </a>
-                    <h2 class="li-title" title="预显示">陆小凤传奇之幽灵山庄</h2>
-                    <h2 class="title-ch" title="预显示">陆小凤传奇之幽灵山庄</h2>
-                    <p class="description">那个叶灵给我看尿了。。。我一边干别的一边看，冷不丁一抬头吓老子一跳。。。你那春药是真牛逼，但凡陆小凤有一点反抗能力都不能从了她。。</p>
-                    <div class="qianm clearfloat">
-                        <span class="sp1">2020-11-11</span>
 
                     </div>
                 </li>

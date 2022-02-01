@@ -24,7 +24,7 @@
 }
 
 .content .rec_con ul li.bd-1:hover {
-    background: #98D3E8;
+    background: #c79cff;
 }
 
 .content .rec_con ul li.bd-2 {
@@ -40,7 +40,7 @@
 }
 
 .content .rec_con ul li.bd-3:hover {
-    background: #FF525A;
+    background: #ff878d;
 }
 
 .content .rec_con ul li.bd-4 {
@@ -48,7 +48,7 @@
 }
 
 .content .rec_con ul li.bd-4:hover {
-    background: #71C46F;
+    background: #748ed4;
 }
 
 .content .rec_con ul li img {
@@ -89,7 +89,7 @@
 }
 
 .content .rec_con ul li .a-index h2.fc-1 {
-    color: #98D3E8;
+    color: #99e3fd;
 }
 
 .content .rec_con ul li .a-index h2.fc-2 {
@@ -97,11 +97,11 @@
 }
 
 .content .rec_con ul li .a-index h2.fc-3 {
-    color: #FF525A;
+    color: #ff9095;
 }
 
 .content .rec_con ul li .a-index h2.fc-4 {
-    color: #71C46F;
+    color: #e4a1ff;
 }
 
 .content .rec_con ul li .a-index h2 span {
