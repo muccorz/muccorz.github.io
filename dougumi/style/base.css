@@ -60,6 +60,7 @@ textarea {
     text-transform: uppercase;
     transition: .5s;
     padding: 5px 10px;
+    font-family: Arial;
 }
 
 .pagetop ul li a:hover {
