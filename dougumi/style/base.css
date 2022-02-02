@@ -30,7 +30,80 @@ textarea {
 }
 
 .pagetop {
-    /* height: 130px; */
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.pagetop ul {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.pagetop ul li {
+    list-style: none;
+}
+
+.pagetop ul li a {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 0 25px;
+    color: #616161;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    padding: 5px 10px;
+}
+
+.pagetop ul li a:hover {
+    color: #fff;
+    background: #ee919a;
+}
+
+.pagetop ul li a:before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #ee919a;
+    border-width: 0 0 3px 3px;
+    transition: .5s;
+    opacity: 0;
+}
+
+.pagetop ul li a:hover:before {
+    bottom: -8px;
+    left: -8px;
+    opacity: 1;
+}
+
+.pagetop ul li a:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #ee919a;
+    border-width: 3px 3px 0 0;
+    transition: .5s;
+    opacity: 0;
+}
+
+.pagetop ul li a:hover:after {
+    top: -8px;
+    right: -8px;
+    opacity: 1;
 }
 
 body {

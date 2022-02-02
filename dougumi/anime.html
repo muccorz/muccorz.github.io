@@ -23,9 +23,9 @@
     <script type="text/javascript" src="js/jQeasing.js"></script>
     <script type="text/javascript">
         /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	masonry还有很多参数我这里注解了常用的参数
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	masonry还有很多参数我这里注解了常用的参数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
         $(function() {
             /*瀑布流开始*/
             var container = $('.waterfull ul');
@@ -4615,31 +4615,14 @@
 
 <body>
     <div class="pagetop">
-        <div class="wrapper">
-            <nav>
-                <input type="radio" name="tab" id="home" checked>
-                <input type="radio" name="tab" id="comment">
-                <input type="radio" name="tab" id="envelope">
-                <input type="radio" name="tab" id="heart">
-                <input type="radio" name="tab" id="user">
-                <label for="home" class="home">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Anime</a>
-            </label>
-                <label for="comment" class="comment">
-                <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>Movie</a>
-            </label>
-                <label for="envelope" class="envelope">
-                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>Music</a>
-            </label>
-                <label for="heart" class="heart">
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Book</a>
-            </label>
-                <label for="user" class="user">
-                <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Game</a>
-            </label>
-                <div class="tab"></div>
-            </nav>
-        </div>
+        <ul>
+            <li><a href="https://muccorz.github.io/dougumi/anime.html">anime</a></li>
+            <li><a href="https://muccorz.github.io/dougumi/movie.html">movie</a></li>
+            <li><a href="">music</a></li>
+            <li><a href="">game</a></li>
+            <li><a href="">book</a></li>
+
+        </ul>
     </div>
     <div class="content">
         <!-- 瀑布流样式开始 -->
