@@ -23,9 +23,9 @@
     <script type="text/javascript" src="js/jQeasing.js"></script>
     <script type="text/javascript">
         /*
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	masonry还有很多参数我这里注解了常用的参数
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	masonry还有很多参数我这里注解了常用的参数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */
         $(function() {
             /*瀑布流开始*/
             var container = $('.waterfull ul');
@@ -63,6 +63,7 @@
                 });
             });
             /*模拟从后台获取到的数据*/
+            // 我他妈模拟不出来 谁来教我怎么搞这个外部json 我快被这三千九百多行的html搞疯了
             var sqlJson = [{
                 'src': 'bgmanime/	235612	.jpg',
                 'title': '	はたらく細胞	 ',
@@ -4609,7 +4610,7 @@
             };
             //loadImage('images/one.jpeg', test());
             /*item hover效果*/
-            var rbgB = ['#71D3F5', '#F0C179', '#F28386', '#8BD38B'];
+            var rbgB = ['#B5EAEA', '#EDF6E5', '#FFBCBC', '#BEAEE2'];
             $('#waterfull').on('mouseover', '.item', function() {
                 var random = Math.floor(Math.random() * 4);
                 $(this).stop(true).animate({

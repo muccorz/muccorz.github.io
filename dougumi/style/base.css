@@ -107,7 +107,8 @@ textarea {
 }
 
 body {
-    background: #EEEEEE;
+    /* background: #EEEEEE; */
+    background-image: linear-gradient(#F9F9F9, #F4F9F9);
     overflow-x: hidden;
     font-size: 62.5%;
 }
