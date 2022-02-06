@@ -9,8 +9,7 @@
     padding: 5px;
     margin: 0 8px;
     height: 200px;
-    /* background: #E8E8E8; */
-    background-image: linear-gradient(#e66465, #9198e5);
+    background: #E8E8E8;
     border-radius: 3px;
     position: relative;
     -webkit-transition: all .45s ease-in-out;
