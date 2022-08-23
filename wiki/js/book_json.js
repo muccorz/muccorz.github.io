@@ -20,7 +20,7 @@ $(function() {
                 $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.intro + "</p>"));
             })
             $(".paging_list").paging({
-                PageNum: 8, //每页显示数目
+                PageNum: 8, //每页显示数
                 pageMax: true, //按钮长度是否显示
                 pageMaxHideShow: false, //在最后一个的时候是否隐藏按钮长度
                 pageDownUpHide: false, //到第一个或最后一个是否让上一页或下一页消失
