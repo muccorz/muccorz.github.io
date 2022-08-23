@@ -15,7 +15,7 @@ $(function() {
                 var date = new Date(v.date * 1000);
                 Y = date.getFullYear() + '-';
                 M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-                D = date.getDate() + ' ';
+                D = (date.getDate() + 1 < 10 ? '0' + (date.getDate() + 1) : date.getDate() + 1);
                 $("li:eq(" + k + ") .box").append(("<p class='time'>" + Y + M + D + "</p>"));
                 $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.intro + "</p>"));
             })
