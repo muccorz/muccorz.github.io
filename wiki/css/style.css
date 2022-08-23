@@ -35,7 +35,6 @@ body {
     padding: 10px 0;
     border-bottom: dashed #ccc 1px;
     overflow: hidden;
-    cursor: pointer;
     align-items: center;
 }
 
