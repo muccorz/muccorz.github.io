@@ -6,6 +6,27 @@
     list-style: none;
 } */
 
+
+/* 响应式 */
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .paging_container {
+        width: 100%;
+        margin: 30px auto;
+    }
+    .img img {
+        border-radius: 5px;
+        display: block;
+        height: auto;
+        width: 100px;
+        -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.263);
+    }
+}
+
+
+/* 响应式 */
+
 body {
     margin-bottom: 50px;
 }
