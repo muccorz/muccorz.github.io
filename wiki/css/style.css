@@ -120,6 +120,7 @@ h1:hover {
 
 span {
     margin: 5px;
+    margin-top: 0;
     width: 40px;
     height: 40px;
     color: rgb(141, 188, 193);
@@ -154,8 +155,9 @@ span:nth-last-child {
     border: 1px solid #ccc;
     cursor: pointer;
     text-align: center;
-    border-right: 0;
+    /* border-right: 0; */
     border-radius: 5px;
+    margin: 0 5px;
 }
 
 .paging_last {
