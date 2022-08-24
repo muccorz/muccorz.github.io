@@ -119,6 +119,7 @@ h1:hover {
 }
 
 span {
+    margin: 5px;
     width: 40px;
     height: 40px;
     color: rgb(141, 188, 193);
@@ -127,7 +128,7 @@ span {
     cursor: pointer;
     transition: .5s;
     border: 1px solid #ccc;
-    border-right: 0;
+    /* border-right: 0; */
     border-radius: 5px;
 }
 
@@ -148,7 +149,7 @@ span:nth-last-child {
     width: 60px;
     height: 40px;
     line-height: 40px;
-    color: rgb(91, 146, 152);
+    color: rgb(141, 188, 193);
     ;
     border: 1px solid #ccc;
     cursor: pointer;
@@ -186,6 +187,7 @@ span:nth-last-child {
     height: 38px;
     border: 1px solid #ccc;
     outline: none;
+    border-radius: 5px;
 }
 
 .paging_textBox button {
@@ -197,6 +199,8 @@ span:nth-last-child {
     transition: .5s;
     margin-left: 10px;
     outline: none;
+    background-color: rgb(141, 188, 193);
+    border-radius: 5px;
 }
 
 .paging_textBox button:hover {
