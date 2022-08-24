@@ -212,7 +212,7 @@ span:nth-last-child {
 .paging_max {
     padding: 0 10px;
     height: 40px;
-    line-height: 40px;
+    /* line-height: 40px; */
     text-align: center;
     color: #8b8b8b;
 }
