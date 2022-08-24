@@ -118,12 +118,14 @@ h1:hover {
 }
 
 .paging_btn span:hover {
-    background-color: #b6b6b6;
+    background-color: rgb(141, 188, 193);
+    ;
     color: #fff;
 }
 
 .paging_active {
-    background-color: #b6b6b6;
+    background-color: rgb(141, 188, 193);
+    ;
     color: #fff;
 }
 
@@ -156,11 +158,13 @@ span:nth-last-child {
     width: 60px;
     height: 40px;
     line-height: 40px;
-    color: #333;
+    color: rgb(91, 146, 152);
+    ;
     border: 1px solid #ccc;
     cursor: pointer;
     text-align: center;
     border-right: 0;
+    border-radius: 5px;
 }
 
 .paging_last {
