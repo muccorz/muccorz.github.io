@@ -311,7 +311,6 @@ section h2 {
     background-color: transparent;
     bottom: 50%;
     left: 0;
-    class='text';
     width: 95%;
 }
 
@@ -326,7 +325,7 @@ section h2 {
 /* 评分 */
 
 .score {
-    margin-top: 0;
+    margin: 0;
     display: block;
     float: right;
 }
