@@ -326,6 +326,7 @@ section h2 {
 
 .score {
     margin: 0;
+    margin-right: 15px;
     display: block;
     float: right;
 }
