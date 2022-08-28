@@ -321,3 +321,12 @@ section h2 {
     padding-top: 1px;
     background: linear-gradient(to right, transparent, #d0d0d5, transparent);
 }
+
+
+/* 评分 */
+
+.score {
+    margin-top: 0;
+    display: block;
+    float: right;
+}
