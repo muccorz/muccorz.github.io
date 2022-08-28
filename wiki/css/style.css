@@ -325,6 +325,7 @@ section h2 {
 /* 评分 */
 
 .score {
+    color: rgb(141, 188, 193);
     margin: 0;
     margin-right: 15px;
     display: block;
