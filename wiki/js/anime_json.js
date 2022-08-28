@@ -12,11 +12,27 @@ $(function() {
                 $("li:eq(" + k + ") .box").append(("<little class='namech'>" + v.namech + "</>"));
                 // $("li:eq(" + k + ") .box").append(("<p class='time'>" + v.time + "</p>"));
                 // $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.paragraph + "</p>"));
+                // 日期
                 var date = new Date(v.date * 1000);
                 Y = date.getFullYear() + '-';
                 M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
                 D = (date.getDate() + 1 < 10 ? '0' + (date.getDate()) : date.getDate());
-                $("li:eq(" + k + ") .box").append(("<p class='time'>" + Y + M + D + "</p>"));
+                // 分数
+                scoreS = parseInt(v.score / 2);
+                scoreY = v.score % 2;
+                scoreRs = "";
+                scoreRy = "";
+                for (var i = 0; i < scoreS; i++) {
+                    scoreRs += "★";
+                }
+
+                if (scoreY != 0) {
+                    scoreRy = "☆";
+                }
+
+                $("li:eq(" + k + ") .box").append(("<div class='time'>" + Y + M + D + "<p class='score'>" + scoreRs + scoreRy + "</p></div>"));
+                //原来没有评分的时间p标签
+                // $("li:eq(" + k + ") .box").append(("<p class='time'>" + Y + M + D + "</p>"));
                 $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.intro + "</p>"));
             })
             $(".paging_list").paging({
