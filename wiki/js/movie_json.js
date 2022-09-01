@@ -21,21 +21,21 @@ $(function() {
                 $("li:eq(" + k + ") .box").append(("<p class='time'>" + Y + M + D + "</p>"));
                 $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.intro + "</p>"));
 
-                // @namespace    https://github.com/shadowdreamer/jioben/tree/master/bangumi
-                // @author       cureDovahkiin
+
 
             })
             $(".paging_list").paging({
-                PageNum: 8, //每页显示数目
-                pageMax: true, //按钮长度是否显示
-                pageMaxHideShow: false, //在最后一个的时候是否隐藏按钮长度
-                pageDownUpHide: false, //到第一个或最后一个是否让上一页或下一页消失
-                pageInput: true, //是否使用文本框输入跳转
-                pagingBtnHide: false, //是否让按钮变为一个
-                pagingBtnPaging: true, //按钮是否分页
-                pagingDisplay: "flex", //显示的属性，弹性盒子还是块化
-            })
-
+                    PageNum: 8, //每页显示数目
+                    pageMax: true, //按钮长度是否显示
+                    pageMaxHideShow: false, //在最后一个的时候是否隐藏按钮长度
+                    pageDownUpHide: false, //到第一个或最后一个是否让上一页或下一页消失
+                    pageInput: true, //是否使用文本框输入跳转
+                    pagingBtnHide: false, //是否让按钮变为一个
+                    pagingBtnPaging: true, //按钮是否分页
+                    pagingDisplay: "flex", //显示的属性，弹性盒子还是块化
+                })
+                // @namespace    https://github.com/shadowdreamer/jioben/tree/master/bangumi
+                // @author       cureDovahkiin
             const henshin = dom => {
                 if (/\(bgm[0-9]*\)/.test(dom.innerText)) {
                     dom.innerHTML = dom.innerHTML.replace(/\(bgm[0-9]*\)/g, s => `<img src="${smiles[s]}" alt="${s}">`)
@@ -60,7 +60,7 @@ $(function() {
                         })
                     }, 39);
                 }
-                console.log('over');
+
             })
         },
 
