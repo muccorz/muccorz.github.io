@@ -13,12 +13,12 @@ $(function() {
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
 
                 if (v.bool) {
-                    $("li:eq(" + k + ") .box").append(("<a href='http://www.w3school.com.cn'>" + v.title + "</a>"));
+                    $("li:eq(" + k + ") .box").append(("<a href='####'>" + v.title + "</a>"));
                 } else {
                     $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
                 }
 
-                $("li:eq(" + k + ") .box").append(("<h1 >" + v.title + "</h1>"));
+                // $("li:eq(" + k + ") .box").append(("<h1 >" + v.title + "</h1>"));
                 $("li:eq(" + k + ") .box").append(("<little class='namech'>" + v.namech + "</>"));
                 // $("li:eq(" + k + ") .box").append(("<p class='time'>" + v.time + "</p>"));
                 // $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.paragraph + "</p>"));
