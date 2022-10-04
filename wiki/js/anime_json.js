@@ -11,7 +11,14 @@ $(function() {
                 // $("ul").append("<li><div class='img'><img src='" + v.images + "'></div></li>")
                 $("ul").append("<li><div class='img'><img src='" + v.src + "'></div></li>")
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
-                $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
+
+                if (v.bool) {
+                    $("li:eq(" + k + ") .box").append(("<a href='http://www.w3school.com.cn'>" + v.title + "</a>"));
+                } else {
+                    $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
+                }
+
+                $("li:eq(" + k + ") .box").append(("<h1 >" + v.title + "</h1>"));
                 $("li:eq(" + k + ") .box").append(("<little class='namech'>" + v.namech + "</>"));
                 // $("li:eq(" + k + ") .box").append(("<p class='time'>" + v.time + "</p>"));
                 // $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.paragraph + "</p>"));
@@ -74,7 +81,7 @@ $(function() {
                         })
                     }, 39);
                 }
-                console.log('over');
+
             })
         },
     })
