@@ -13,7 +13,7 @@ $(function() {
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
 
                 //是否创建a标签
-                if (v.bool == 'true') {
+                if (v.bool == '1') {
                     $("li:eq(" + k + ") .box").append(("<a href='####'>" + v.title + "</a>"));
                 } else {
                     $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
