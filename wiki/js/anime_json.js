@@ -12,7 +12,8 @@ $(function() {
                 $("ul").append("<li><div class='img'><img src='" + v.src + "'></div></li>")
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
 
-                if (v.bool) {
+                //是否创建a标签
+                if (v.bool == 'true') {
                     $("li:eq(" + k + ") .box").append(("<a href='####'>" + v.title + "</a>"));
                 } else {
                     $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
