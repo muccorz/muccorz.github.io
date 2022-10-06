@@ -9,13 +9,13 @@ $(function() {
         success: function(data) {
             $.each(data, function(k, v) {
                 // $("ul").append("<li><div class='img'><img src='" + v.images + "'></div></li>")
-                $("ul").append("<li><div class='img'><img src='" + v.src + "'></div></li>")
+                $("ul").append("<li><div class='img'><img src='bgmanime/" + v.src + ".jpg' ></div></li>")
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
 
                 //是否创建a标签
                 if (v.bool == '1') {
 
-                    $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
+                    $("li:eq(" + k + ") .box").append(("<a href ='bgmanime/" + v.src + ".html' class='newpage' >" + v.title + "</a>"));
 
                 } else {
                     $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));

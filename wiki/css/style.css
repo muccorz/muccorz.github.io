@@ -331,3 +331,15 @@ section h2 {
     display: block;
     float: right;
 }
+
+
+/* 新页 */
+
+.newpage {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #EF919A;
+    margin-bottom: 0;
+}
