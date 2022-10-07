@@ -8,7 +8,7 @@ $(function() {
         success: function(data) {
             $.each(data, function(k, v) {
                 // $("ul").append("<li><div class='img'><img src='" + v.images + "'></div></li>")
-                $("ul").append("<li><div class='img'><img src='" + v.src + "'></div></li>")
+                $("ul").append("<li><div class='img'><img src='musicimg/" + v.src + ".jpg'></div></li>")
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
 
                 if (v.bool == '1') {
