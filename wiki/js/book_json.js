@@ -12,7 +12,7 @@ $(function() {
                 $("li:eq(" + k + ")").append(("<div class='box'></div>"));
                 if (v.bool == '1') {
 
-                    $("li:eq(" + k + ") .box").append(("<a href ='bookimg/" + v.src + ".html' class='newpage' >" + v.title + "</a>"));
+                    $("li:eq(" + k + ") .box").append(("<a target='_blank' href ='bookimg/" + v.src + ".html' class='newpage' >" + v.title + "</a>"));
 
                 } else {
                     $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
