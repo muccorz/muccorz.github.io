@@ -37,7 +37,7 @@ body {
     color: #736f6ffa;
     font-size: 13px;
     letter-spacing: 3px;
-    box-shadow: inset 10px 10px 10px #b4b657;
+    box-shadow: inset 0px 0px 15px 5px #abad8a;
     white-space: pre;
     text-align: center;
 }
