@@ -1,311 +1,1183 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
-.mac-os-11 { --title-bar-height: 28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) { 
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-thead, tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-svg { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print { 
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print { 
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) { 
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) { 
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ''; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
-
-
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
-
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
-
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
-
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-
-/*@media print {
+    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+    <style type='text/css'>
+        html {
+            overflow-x: initial !important;
+        }
+        
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --select-text-bg-color: #B5D6FC;
+            --select-text-font-color: auto;
+            --monospace: "Lucida Console", Consolas, "Courier", monospace;
+            --title-bar-height: 20px;
+        }
+        
+        .mac-os-11 {
+            --title-bar-height: 28px;
+        }
+        
+        html {
+            font-size: 14px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: auto;
+            bottom: 0px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            font-size: 1rem;
+            line-height: 1.42857143;
+            overflow-x: hidden;
+            background-image: inherit;
+            background-size: inherit;
+            background-attachment: inherit;
+            background-origin: inherit;
+            background-clip: inherit;
+            background-color: inherit;
+            tab-size: 4;
+            background-position: inherit inherit;
+            background-repeat: inherit inherit;
+        }
+        
+        iframe {
+            margin: auto;
+        }
+        
+        a.url {
+            word-break: break-all;
+        }
+        
+        a:active,
+        a:hover {
+            outline: 0px;
+        }
+        
+        .in-text-selection,
+         ::selection {
+            text-shadow: none;
+            background: var(--select-text-bg-color);
+            color: var(--select-text-font-color);
+        }
+        
+        #write {
+            margin: 0px auto;
+            height: auto;
+            width: inherit;
+            word-break: normal;
+            word-wrap: break-word;
+            position: relative;
+            white-space: normal;
+            overflow-x: visible;
+            padding-top: 36px;
+        }
+        
+        #write.first-line-indent p {
+            text-indent: 2em;
+        }
+        
+        #write.first-line-indent li p,
+        #write.first-line-indent p * {
+            text-indent: 0px;
+        }
+        
+        #write.first-line-indent li {
+            margin-left: 2em;
+        }
+        
+        .for-image #write {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        
+        body.typora-export {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        .typora-export .footnote-line,
+        .typora-export li,
+        .typora-export p {
+            white-space: pre-wrap;
+        }
+        
+        .typora-export .task-list-item input {
+            pointer-events: none;
+        }
+        
+        @media screen and (max-width: 500px) {
+            body.typora-export {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            #write {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        
+        #write li>figure:last-child {
+            margin-bottom: 0.5rem;
+        }
+        
+        #write ol,
+        #write ul {
+            position: relative;
+        }
+        
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+            image-orientation: from-image;
+        }
+        
+        button,
+        input,
+        select,
+        textarea {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-variant-caps: inherit;
+            font-weight: inherit;
+            font-stretch: inherit;
+            line-height: inherit;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            line-height: normal;
+            padding: 0px;
+        }
+        
+        *,
+         ::after,
+         ::before {
+            box-sizing: border-box;
+        }
+        
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p,
+        #write pre {
+            width: inherit;
+        }
+        
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6,
+        #write p {
+            position: relative;
+        }
+        
+        p {
+            line-height: inherit;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            break-after: avoid-page;
+            break-inside: avoid;
+            orphans: 4;
+        }
+        
+        p {
+            orphans: 4;
+        }
+        
+        h1 {
+            font-size: 2rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+        }
+        
+        h4 {
+            font-size: 1.4rem;
+        }
+        
+        h5 {
+            font-size: 1.2rem;
+        }
+        
+        h6 {
+            font-size: 1rem;
+        }
+        
+        .md-math-block,
+        .md-rawblock,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .md-blockmeta {
+            color: rgb(204, 204, 204);
+            font-weight: 700;
+            font-style: italic;
+        }
+        
+        a {
+            cursor: pointer;
+        }
+        
+        sup.md-footnote {
+            padding: 2px 4px;
+            background-color: rgba(238, 238, 238, 0.7);
+            color: rgb(85, 85, 85);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            cursor: pointer;
+        }
+        
+        sup.md-footnote a,
+        sup.md-footnote a:hover {
+            color: inherit;
+            text-transform: inherit;
+            text-decoration: inherit;
+        }
+        
+        #write input[type="checkbox"] {
+            cursor: pointer;
+            width: inherit;
+            height: inherit;
+        }
+        
+        figure {
+            overflow-x: auto;
+            margin: 1.2em 0px;
+            max-width: calc(100% + 16px);
+            padding: 0px;
+        }
+        
+        figure>table {
+            margin: 0px;
+        }
+        
+        thead,
+        tr {
+            break-inside: avoid;
+            break-after: auto;
+        }
+        
+        thead {
+            display: table-header-group;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+            width: 100%;
+            overflow: auto;
+            break-inside: auto;
+            text-align: left;
+        }
+        
+        table.md-table td {
+            min-width: 32px;
+        }
+        
+        .CodeMirror-gutters {
+            border-right-width: 0px;
+            background-color: inherit;
+        }
+        
+        .CodeMirror-linenumber {}
+        
+        .CodeMirror {
+            text-align: left;
+        }
+        
+        .CodeMirror-placeholder {
+            opacity: 0.3;
+        }
+        
+        .CodeMirror pre {
+            padding: 0px 4px;
+        }
+        
+        .CodeMirror-lines {
+            padding: 0px;
+        }
+        
+        div.hr:focus {
+            cursor: none;
+        }
+        
+        #write pre {
+            white-space: pre-wrap;
+        }
+        
+        #write.fences-no-line-wrapping pre {
+            white-space: pre;
+        }
+        
+        #write pre.ty-contain-cm {
+            white-space: normal;
+        }
+        
+        .CodeMirror-gutters {
+            margin-right: 4px;
+        }
+        
+        .md-fences {
+            font-size: 0.9rem;
+            display: block;
+            break-inside: avoid;
+            text-align: left;
+            overflow: visible;
+            white-space: pre;
+            background-image: inherit;
+            background-size: inherit;
+            background-attachment: inherit;
+            background-origin: inherit;
+            background-clip: inherit;
+            background-color: inherit;
+            position: relative !important;
+            background-position: inherit inherit;
+            background-repeat: inherit inherit;
+        }
+        
+        .md-fences-adv-panel {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 8px;
+            overflow-x: auto;
+        }
+        
+        #write .md-fences.mock-cm {
+            white-space: pre-wrap;
+        }
+        
+        .md-fences.md-fences-with-lineno {
+            padding-left: 0px;
+        }
+        
+        #write.fences-no-line-wrapping .md-fences.mock-cm {
+            white-space: pre;
+            overflow-x: auto;
+        }
+        
+        .md-fences.mock-cm.md-fences-with-lineno {
+            padding-left: 8px;
+        }
+        
+        .CodeMirror-line,
+        twitterwidget {
+            break-inside: avoid;
+        }
+        
+        svg {
+            break-inside: avoid;
+        }
+        
+        .footnotes {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        
+        .footnotes+.footnotes {
+            margin-top: 0px;
+        }
+        
+        .md-reset {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            outline: 0px;
+            vertical-align: top;
+            text-decoration: none;
+            text-shadow: none;
+            float: none;
+            position: static;
+            width: auto;
+            height: auto;
+            white-space: nowrap;
+            cursor: inherit;
+            line-height: normal;
+            font-weight: 400;
+            text-align: left;
+            box-sizing: content-box;
+            direction: ltr;
+            background-position: 0px 0px;
+            background-repeat: initial initial;
+        }
+        
+        li div {
+            padding-top: 0px;
+        }
+        
+        blockquote {
+            margin: 1rem 0px;
+        }
+        
+        li .mathjax-block,
+        li p {
+            margin: 0.5rem 0px;
+        }
+        
+        li blockquote {
+            margin: 1rem 0px;
+        }
+        
+        li {
+            margin: 0px;
+            position: relative;
+        }
+        
+        blockquote> :last-child {
+            margin-bottom: 0px;
+        }
+        
+        blockquote> :first-child,
+        li> :first-child {
+            margin-top: 0px;
+        }
+        
+        .footnotes-area {
+            color: rgb(136, 136, 136);
+            margin-top: 0.714rem;
+            padding-bottom: 0.143rem;
+            white-space: normal;
+        }
+        
+        #write .footnote-line {
+            white-space: pre-wrap;
+        }
+        
+        @media print {
+            body,
+            html {
+                border: 1px solid transparent;
+                height: 99%;
+                break-after: avoid;
+                break-before: avoid;
+                font-variant-ligatures: no-common-ligatures;
+            }
+            #write {
+                margin-top: 0px;
+                padding-top: 0px;
+                border-color: transparent !important;
+                padding-bottom: 0px !important;
+            }
+            .typora-export * {
+                -webkit-print-color-adjust: exact;
+            }
+            .typora-export #write {
+                break-after: avoid;
+            }
+            .typora-export #write::after {
+                height: 0px;
+            }
+            .is-mac table {
+                break-inside: avoid;
+            }
+            .typora-export-show-outline .typora-export-sidebar {
+                display: none;
+            }
+        }
+        
+        .footnote-line {
+            margin-top: 0.714em;
+            font-size: 0.7em;
+        }
+        
+        a img,
+        img a {
+            cursor: pointer;
+        }
+        
+        pre.md-meta-block {
+            font-size: 0.8rem;
+            min-height: 0.8rem;
+            white-space: pre-wrap;
+            background-color: rgb(204, 204, 204);
+            display: block;
+            overflow-x: hidden;
+            background-position: initial initial;
+            background-repeat: initial initial;
+        }
+        
+        p>.md-image:only-child:not(.md-img-error) img,
+        p>img:only-child {
+            display: block;
+            margin: auto;
+        }
+        
+        #write.first-line-indent p>.md-image:only-child:not(.md-img-error) img {
+            left: -2em;
+            position: relative;
+        }
+        
+        p>.md-image:only-child {
+            display: inline-block;
+            width: 100%;
+        }
+        
+        #write .MathJax_Display {
+            margin: 0.8em 0px 0px;
+        }
+        
+        .md-math-block {
+            width: 100%;
+        }
+        
+        .md-math-block:not(:empty)::after {
+            display: none;
+        }
+        
+        .MathJax_ref {
+            fill: currentcolor;
+        }
+        
+        [contenteditable="true"]:active,
+        [contenteditable="true"]:focus,
+        [contenteditable="false"]:active,
+        [contenteditable="false"]:focus {
+            outline: 0px;
+            box-shadow: none;
+        }
+        
+        .md-task-list-item {
+            position: relative;
+            list-style-type: none;
+        }
+        
+        .task-list-item.md-task-list-item {
+            padding-left: 0px;
+        }
+        
+        .md-task-list-item>input {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin-left: -1.2em;
+            margin-top: calc(1em - 10px);
+            border: none;
+        }
+        
+        .math {
+            font-size: 1rem;
+        }
+        
+        .md-toc {
+            min-height: 3.58rem;
+            position: relative;
+            font-size: 0.9rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .md-toc-content {
+            position: relative;
+            margin-left: 0px;
+        }
+        
+        .md-toc-content::after,
+        .md-toc::after {
+            display: none;
+        }
+        
+        .md-toc-item {
+            display: block;
+            color: rgb(65, 131, 196);
+        }
+        
+        .md-toc-item a {
+            text-decoration: none;
+        }
+        
+        .md-toc-inner:hover {
+            text-decoration: underline;
+        }
+        
+        .md-toc-inner {
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .md-toc-h1 .md-toc-inner {
+            margin-left: 0px;
+            font-weight: 700;
+        }
+        
+        .md-toc-h2 .md-toc-inner {
+            margin-left: 2em;
+        }
+        
+        .md-toc-h3 .md-toc-inner {
+            margin-left: 4em;
+        }
+        
+        .md-toc-h4 .md-toc-inner {
+            margin-left: 6em;
+        }
+        
+        .md-toc-h5 .md-toc-inner {
+            margin-left: 8em;
+        }
+        
+        .md-toc-h6 .md-toc-inner {
+            margin-left: 10em;
+        }
+        
+        @media screen and (max-width: 48em) {
+            .md-toc-h3 .md-toc-inner {
+                margin-left: 3.5em;
+            }
+            .md-toc-h4 .md-toc-inner {
+                margin-left: 5em;
+            }
+            .md-toc-h5 .md-toc-inner {
+                margin-left: 6.5em;
+            }
+            .md-toc-h6 .md-toc-inner {
+                margin-left: 8em;
+            }
+        }
+        
+        a.md-toc-inner {
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+        
+        .footnote-line a:not(.reversefootnote) {
+            color: inherit;
+        }
+        
+        .md-attr {
+            display: none;
+        }
+        
+        .md-fn-count::after {
+            content: ".";
+        }
+        
+        code,
+        pre,
+        samp,
+        tt {
+            font-family: var(--monospace);
+        }
+        
+        kbd {
+            margin: 0px 0.1em;
+            padding: 0.1em 0.6em;
+            font-size: 0.8em;
+            color: rgb(36, 39, 41);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(173, 179, 185);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset;
+            white-space: nowrap;
+            vertical-align: middle;
+            background-position: initial initial;
+            background-repeat: initial initial;
+        }
+        
+        .md-comment {
+            color: rgb(162, 127, 3);
+            opacity: 0.6;
+            font-family: var(--monospace);
+        }
+        
+        code {
+            text-align: left;
+        }
+        
+        a.md-print-anchor {
+            white-space: pre !important;
+            border: none !important;
+            display: inline-block !important;
+            position: absolute !important;
+            width: 1px !important;
+            right: 0px !important;
+            outline: 0px !important;
+            text-shadow: initial !important;
+            background-position: 0px 0px !important;
+            background-repeat: initial initial !important;
+        }
+        
+        .os-windows.monocolor-emoji .md-emoji {
+            font-family: "Segoe UI Symbol", sans-serif;
+        }
+        
+        .md-diagram-panel>svg {
+            max-width: 100%;
+        }
+        
+        [lang="flow"] svg,
+        [lang="mermaid"] svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        [lang="mermaid"] .node text {
+            font-size: 1rem;
+        }
+        
+        table tr th {
+            border-bottom-width: 0px;
+        }
+        
+        video {
+            max-width: 100%;
+            display: block;
+            margin: 0px auto;
+        }
+        
+        iframe {
+            max-width: 100%;
+            width: 100%;
+            border: none;
+        }
+        
+        .highlight td,
+        .highlight tr {
+            border: 0px;
+        }
+        
+        mark {
+            background-color: rgb(255, 255, 0);
+            color: rgb(0, 0, 0);
+            background-position: initial initial;
+            background-repeat: initial initial;
+        }
+        
+        .md-html-inline .md-plain,
+        .md-html-inline strong,
+        mark .md-inline-math,
+        mark strong {
+            color: inherit;
+        }
+        
+        .md-expand mark .md-meta {
+            opacity: 0.3 !important;
+        }
+        
+        mark .md-meta {
+            color: rgb(0, 0, 0);
+        }
+        
+        @media print {
+            .typora-export h1,
+            .typora-export h2,
+            .typora-export h3,
+            .typora-export h4,
+            .typora-export h5,
+            .typora-export h6 {
+                break-inside: avoid;
+            }
+        }
+        
+        .md-diagram-panel .messageText {
+            stroke: none !important;
+        }
+        
+        .md-diagram-panel .start-state {
+            fill: var(--node-fill);
+        }
+        
+        .md-diagram-panel .edgeLabel rect {
+            opacity: 1 !important;
+        }
+        
+        .md-fences.md-fences-math {
+            font-size: 1em;
+        }
+        
+        .md-fences-advanced:not(.md-focus) {
+            padding: 0px;
+            white-space: nowrap;
+            border: 0px;
+        }
+        
+        .md-fences-advanced:not(.md-focus) {
+            background-image: inherit;
+            background-size: inherit;
+            background-attachment: inherit;
+            background-origin: inherit;
+            background-clip: inherit;
+            background-color: inherit;
+            background-position: inherit inherit;
+            background-repeat: inherit inherit;
+        }
+        
+        .typora-export-show-outline .typora-export-content {
+            max-width: 1440px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .typora-export-sidebar {
+            width: 300px;
+            font-size: 0.8rem;
+            margin-top: 80px;
+            margin-right: 18px;
+        }
+        
+        .typora-export-show-outline #write {
+            --webkit-flex: 2;
+            flex: 2 1 0%;
+        }
+        
+        .typora-export-sidebar .outline-content {
+            position: fixed;
+            top: 0px;
+            max-height: 100%;
+            overflow: hidden auto;
+            padding-bottom: 30px;
+            padding-top: 60px;
+            width: 300px;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .typora-export-sidebar,
+            .typora-export-sidebar .outline-content {
+                width: 240px;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            .typora-export-sidebar {
+                display: none;
+            }
+        }
+        
+        .outline-content li,
+        .outline-content ul {
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            list-style: none;
+        }
+        
+        .outline-content ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        
+        .outline-content strong {
+            font-weight: 400;
+        }
+        
+        .outline-expander {
+            width: 1rem;
+            height: 1.428571429rem;
+            position: relative;
+            display: table-cell;
+            vertical-align: middle;
+            cursor: pointer;
+            padding-left: 4px;
+        }
+        
+        .outline-expander::before {
+            content: '';
+            position: relative;
+            font-family: Ionicons;
+            display: inline-block;
+            font-size: 8px;
+            vertical-align: middle;
+        }
+        
+        .outline-item {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            cursor: pointer;
+        }
+        
+        .outline-expander:hover::before {
+            content: '';
+        }
+        
+        .outline-h1>.outline-item {
+            padding-left: 0px;
+        }
+        
+        .outline-h2>.outline-item {
+            padding-left: 1em;
+        }
+        
+        .outline-h3>.outline-item {
+            padding-left: 2em;
+        }
+        
+        .outline-h4>.outline-item {
+            padding-left: 3em;
+        }
+        
+        .outline-h5>.outline-item {
+            padding-left: 4em;
+        }
+        
+        .outline-h6>.outline-item {
+            padding-left: 5em;
+        }
+        
+        .outline-label {
+            cursor: pointer;
+            display: table-cell;
+            vertical-align: middle;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .outline-label:hover {
+            text-decoration: underline;
+        }
+        
+        .outline-item:hover {
+            border-color: rgb(245, 245, 245);
+            background-color: var(--item-hover-bg-color);
+        }
+        
+        .outline-item:hover {
+            margin-left: -28px;
+            margin-right: -28px;
+            border-left-width: 28px;
+            border-left-style: solid;
+            border-left-color: transparent;
+            border-right-width: 28px;
+            border-right-style: solid;
+            border-right-color: transparent;
+        }
+        
+        .outline-item-single .outline-expander::before,
+        .outline-item-single .outline-expander:hover::before {
+            display: none;
+        }
+        
+        .outline-item-open>.outline-item>.outline-expander::before {
+            content: '';
+        }
+        
+        .outline-children {
+            display: none;
+        }
+        
+        .info-panel-tab-wrapper {
+            display: none;
+        }
+        
+        .outline-item-open>.outline-children {
+            display: block;
+        }
+        
+        .typora-export .outline-item {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        
+        .typora-export .outline-item:hover {
+            margin-right: -8px;
+            border-right-width: 8px;
+            border-right-style: solid;
+            border-right-color: transparent;
+        }
+        
+        .typora-export .outline-expander::before {
+            content: "+";
+            font-family: inherit;
+            top: -1px;
+        }
+        
+        .typora-export .outline-expander:hover::before,
+        .typora-export .outline-item-open>.outline-item>.outline-expander::before {
+            content: '−';
+        }
+        
+        .typora-export-collapse-outline .outline-children {
+            display: none;
+        }
+        
+        .typora-export-collapse-outline .outline-item-open>.outline-children,
+        .typora-export-no-collapse-outline .outline-children {
+            display: block;
+        }
+        
+        .typora-export-no-collapse-outline .outline-expander::before {
+            content: "" !important;
+        }
+        
+        .typora-export-show-outline .outline-item-active>.outline-item .outline-label {
+            font-weight: 700;
+        }
+        
+        .md-inline-math-container mjx-container {
+            zoom: 0.95;
+        }
+        
+        :root {
+            --side-bar-bg-color: #fafafa;
+            --control-text-color: #777;
+        }
+        
+        @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+        /* open-sans-regular - latin-ext_latin */
+        /* open-sans-italic - latin-ext_latin */
+        /* open-sans-700 - latin-ext_latin */
+        /* open-sans-700italic - latin-ext_latin */
+        
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body {
+            font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+            color: rgb(51, 51, 51);
+            line-height: 1.6;
+        }
+        
+        #write {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 30px;
+            padding-bottom: 100px;
+        }
+        
+        @media only screen and (min-width: 1400px) {
+            #write {
+                max-width: 1024px;
+            }
+        }
+        
+        @media only screen and (min-width: 1800px) {
+            #write {
+                max-width: 1200px;
+            }
+        }
+        
+        #write>ul:first-child,
+        #write>ol:first-child {
+            margin-top: 30px;
+        }
+        
+        a {
+            color: #4183C4;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            position: relative;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            line-height: 1.4;
+            cursor: text;
+        }
+        
+        h1:hover a.anchor,
+        h2:hover a.anchor,
+        h3:hover a.anchor,
+        h4:hover a.anchor,
+        h5:hover a.anchor,
+        h6:hover a.anchor {
+            text-decoration: none;
+        }
+        
+        h1 tt,
+        h1 code {
+            font-size: inherit;
+        }
+        
+        h2 tt,
+        h2 code {
+            font-size: inherit;
+        }
+        
+        h3 tt,
+        h3 code {
+            font-size: inherit;
+        }
+        
+        h4 tt,
+        h4 code {
+            font-size: inherit;
+        }
+        
+        h5 tt,
+        h5 code {
+            font-size: inherit;
+        }
+        
+        h6 tt,
+        h6 code {
+            font-size: inherit;
+        }
+        
+        h1 {
+            font-size: 2.25em;
+            line-height: 1.2;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h2 {
+            font-size: 1.75em;
+            line-height: 1.225;
+            border-bottom: 1px solid #eee;
+        }
+        /*@media print {
     .typora-export h1,
     .typora-export h2 {
         border-bottom: none;
@@ -321,380 +1193,628 @@ h2 {
         border-top: 1px solid #eee;
     }
 }*/
-
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
-
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
-
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
-
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
-
-@media print {
-    html {
-        font-size: 13px;
-    }
-    pre {
-        page-break-inside: avoid;
-        word-wrap: break-word;
-    }
-}
-
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
-
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
-
-.sidebar-tabs {
-    border-bottom: none;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
-.md-lang {
-    color: #b4654d;
-}
-
-/*.html-for-mac {
+        
+        h3 {
+            font-size: 1.5em;
+            line-height: 1.43;
+        }
+        
+        h4 {
+            font-size: 1.25em;
+        }
+        
+        h5 {
+            font-size: 1em;
+        }
+        
+        h6 {
+            font-size: 1em;
+            color: #777;
+        }
+        
+        p,
+        blockquote,
+        ul,
+        ol,
+        dl,
+        table {
+            margin: 0.8em 0;
+        }
+        
+        li>ol,
+        li>ul {
+            margin: 0 0;
+        }
+        
+        hr {
+            height: 2px;
+            padding: 0;
+            margin: 16px 0;
+            background-color: #e7e7e7;
+            border: 0 none;
+            overflow: hidden;
+            box-sizing: content-box;
+        }
+        
+        li p.first {
+            display: inline-block;
+        }
+        
+        ul,
+        ol {
+            padding-left: 30px;
+        }
+        
+        ul:first-child,
+        ol:first-child {
+            margin-top: 0;
+        }
+        
+        ul:last-child,
+        ol:last-child {
+            margin-bottom: 0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            padding: 0 15px;
+            color: #777777;
+        }
+        
+        blockquote blockquote {
+            padding-right: 0;
+        }
+        
+        table {
+            padding: 0;
+            word-break: initial;
+        }
+        
+        table tr {
+            border: 1px solid #dfe2e5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        table tr:nth-child(2n),
+        thead {
+            background-color: #f8f8f8;
+        }
+        
+        table th {
+            font-weight: bold;
+            border: 1px solid #dfe2e5;
+            border-bottom: 0;
+            margin: 0;
+            padding: 6px 13px;
+        }
+        
+        table td {
+            border: 1px solid #dfe2e5;
+            margin: 0;
+            padding: 6px 13px;
+        }
+        
+        table th:first-child,
+        table td:first-child {
+            margin-top: 0;
+        }
+        
+        table th:last-child,
+        table td:last-child {
+            margin-bottom: 0;
+        }
+        
+        .CodeMirror-lines {
+            padding-left: 4px;
+        }
+        
+        .code-tooltip {
+            box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+            border-top: 1px solid #eef2f2;
+        }
+        
+        .md-fences,
+        code,
+        tt {
+            border: 1px solid #e7eaed;
+            background-color: #f8f8f8;
+            border-radius: 3px;
+            padding: 0;
+            padding: 2px 4px 0px 4px;
+            font-size: 0.9em;
+        }
+        
+        code {
+            background-color: #f3f4f4;
+            padding: 0 2px 0 2px;
+        }
+        
+        .md-fences {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            padding-top: 8px;
+            padding-bottom: 6px;
+        }
+        
+        .md-task-list-item>input {
+            margin-left: -1.3em;
+        }
+        
+        @media print {
+            html {
+                font-size: 13px;
+            }
+            pre {
+                page-break-inside: avoid;
+                word-wrap: break-word;
+            }
+        }
+        
+        .md-fences {
+            background-color: #f8f8f8;
+        }
+        
+        #write pre.md-meta-block {
+            padding: 1rem;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f7f7f7;
+            border: 0;
+            border-radius: 3px;
+            color: #777777;
+            margin-top: 0 !important;
+        }
+        
+        .mathjax-block>.code-tooltip {
+            bottom: .375rem;
+        }
+        
+        .md-mathjax-midline {
+            background: #fafafa;
+        }
+        
+        #write>h3.md-focus:before {
+            left: -1.5625rem;
+            top: .375rem;
+        }
+        
+        #write>h4.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
+        
+        #write>h5.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
+        
+        #write>h6.md-focus:before {
+            left: -1.5625rem;
+            top: .285714286rem;
+        }
+        
+        .md-image>.md-meta {
+            /*border: 1px solid #ddd;*/
+            border-radius: 3px;
+            padding: 2px 0px 0px 4px;
+            font-size: 0.9em;
+            color: inherit;
+        }
+        
+        .md-tag {
+            color: #a7a7a7;
+            opacity: 1;
+        }
+        
+        .md-toc {
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .sidebar-tabs {
+            border-bottom: none;
+        }
+        
+        #typora-quick-open {
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+        }
+        
+        #typora-quick-open-item {
+            background-color: #FAFAFA;
+            border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+            border-style: solid;
+            border-width: 1px;
+        }
+        /** focus mode */
+        
+        .on-focus-mode blockquote {
+            border-left-color: rgba(85, 85, 85, 0.12);
+        }
+        
+        header,
+        .context-menu,
+        .megamenu-content,
+        footer {
+            font-family: "Segoe UI", "Arial", sans-serif;
+        }
+        
+        .file-node-content:hover .file-node-icon,
+        .file-node-content:hover .file-node-open-state {
+            visibility: visible;
+        }
+        
+        .mac-seamless-mode #typora-sidebar {
+            background-color: #fafafa;
+            background-color: var(--side-bar-bg-color);
+        }
+        
+        .md-lang {
+            color: #b4654d;
+        }
+        /*.html-for-mac {
     --item-hover-bg-color: #E6F0FE;
 }*/
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
-}
-
-
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>26614088</title>
+        
+        #md-notification .btn {
+            border: 0;
+        }
+        
+        .dropdown-menu .divider {
+            border-color: #e5e5e5;
+            opacity: 0.4;
+        }
+        
+        .ty-preferences .window-content {
+            background-color: #fafafa;
+        }
+        
+        .ty-preferences .nav-group-item.active {
+            color: white;
+            background: #999;
+        }
+        
+        .menu-item-container a.menu-style-btn {
+            background-color: #f5f8fa;
+            background-image: linear-gradient( 180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
+        }
+        
+        @media print {
+            @page {
+                margin: 0 0 0 0;
+            }
+            body.typora-export {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            #write {
+                padding: 0;
+            }
+        }
+    </style>
+    <title>26614088</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h4 id='ep1'><span>ep1</span></h4><p><span>“他是哪个省来的，让他永远不能离开长沙城”</span>
-<span>所以哪个省来的难道不是纯好奇嘛……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>。。。二爷这个丫头有点黑</span></p><hr /><h4 id='ep2'><span>ep2</span></h4><p><span>丫头那个面真的xswl</span>
-<span>讲真丫头演员可以再找好看一点，哪怕演技烂呢……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>不然真的不能理解二爷这么完美的男人为什么对她一见钟情</span>
-<span>我真不行了</span>
-<span>我要给丫头那个面笑死了，二爷你要是被强迫了就眨眨眼</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><hr /><h4 id='ep3'><span>ep3</span></h4><p><span>陈伟霆：这个叫什么，这个叫乱炖是吗（尬笑</span>
-<span>我（*%T#%￥……%&amp;……#￥</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>你是个东北人啊你在说nm呢</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>人张日山都说了我老家也这么吃，你俩不是一家的吗</span><img src="https://bgm.tv/img/smiles/tv/61.gif" referrerpolicy="no-referrer" alt="(bgm84)"><img src="https://bgm.tv/img/smiles/tv/61.gif" referrerpolicy="no-referrer" alt="(bgm84)">
-<span>其实仔细想想张家人都是母么东北人还挺带感</span></p><p><span>八爷真好看，我怀疑他们九门成立的时候除了看倒斗能力声望啥的还要看脸吧，有名有姓的几乎都是好看人，所以我们甚至不知道胖子叫什么</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"></p><p><span>佛爷，睿智（拇指</span></p><p><span>这日语配音。。</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"></p><p><span>二爷这一身黑好看死了</span><img src="https://bgm.tv/img/smiles/tv/42.gif" referrerpolicy="no-referrer" alt="(bgm65)"></p><hr /><h4 id='ep4'><span>ep4</span></h4><p><span>你那是孝顺师娘吗，你那是……</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)">
-<span>这里zyx有点不像他了，好爷们儿（？</span>
-<span>看完沙海再回来看这个，张日山的角色形象出入有点大，这里看着不大机敏。。</span>
-<span>丫头的戏都好苦啊</span><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)"><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)">
-<span>抢钱不打我还给他上供吗？？？</span><img src="https://bgm.tv/img/smiles/tv/04.gif" referrerpolicy="no-referrer" alt="(bgm27)"><span>？？？？？还真就给他上供</span><img src="https://bgm.tv/img/smiles/bgm/13.png" referrerpolicy="no-referrer" alt="(bgm13)">
-<span>嗯？陈皮竟然没有对那个小孩做什么。。我还以为那个小孩会是个骗子啥的被他做掉</span></p><hr /><h4 id='ep5'><span>ep5</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>我在做电饭锅蛋糕 打了一集鸡蛋也没发</span></p><hr /><h4 id='ep6'><span>ep6</span></h4><p><span>这基佬照相我还以为要给二爷来一下子，没想到只是个普通照相</span>
-<span>大蛾子我死了</span>
-<span>两集了 鸡蛋还是没打发</span></p><hr /><h3 id='ep7'><span>ep7</span></h3><p><span>//我懒得打发了 直接下锅蒸 蒸的还能吃 还挺好 电饭锅的不知道怎么样了……</span>
-<span>这个陆建勋有些低配</span>
-<span>八爷这个书生装可爱！</span><img src="https://bgm.tv/img/smiles/tv/27.gif" referrerpolicy="no-referrer" alt="(bgm50)"></p><p><img src="/Users/mucc/Desktop/muccorz.github.io/wiki/doubanimg/26614088/SzVYLud5gfH3lP7.jpg" alt="SzVYLud5gfH3lP7" style="zoom:50%;" /></p><p><span>yysy八爷这个颜 能打的</span></p><p><span>//蛋糕大成功</span></p><hr /><h4 id='ep8'><span>ep8</span></h4><p><span>我第一次看出演员用替身。。。这一脚飞踹挡脸也太（</span>
-<span>zyx这小眼神奶凶奶凶的</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
-<span>呜呜呜呜这是什么玛丽苏好羡慕呜呜呜呜丫头幸福死了</span><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><span>真希望她能多陪陪二爷啊</span>
-<span>我觉得有点（ry</span>
-<span>其实可能有别的解决方法，比如跟二爷说你不去我就自己去，你不告诉我你知道的事我必死，让二爷告诉你你自己去呗，丫头都说了祖辈没有一个人活着出来，你还跟人家说要以国为重戴高帽？谁能看着自己爱人去送死呢……到时候就算人真的没出来，丫头会让你偿命还是怎么？你这性命担保在对方也是性命之虞的前提下毫无价值啊，张启山话术一级烂了</span>
-<span>桃花说：这是别人羡慕不来的好福气啊</span>
-<img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)"><span>然后丫头的表情看得我好难过……哭</span></p><p><span>啊啊啊亲手手，我的丫头，什么都好</span><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><span>呜呜呜呜呜呜</span></p><p><span>说起来我才意识到zyx就是长沙人</span></p><hr /><h4 id='ep9'><span>ep9</span></h4><p><span>二爷这家伙事儿，看着跟蟹八件似的</span></p><p><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)"><span>天火同人雷风恒，泽风大过山水蒙，善恶到头谁来报，举头三尺有神明，易经八卦乾坤手，翻云覆雨几多情</span>
-<span>？？？？竟然认识二爷的吗</span></p><p><span>我没有想到二爷出手就是这样一记直拳</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>艹张启山这出招23333这哪是佛爷这分明是奎爷</span></p><hr /><h4 id='ep10'><span>ep10</span></h4><p><span>原来赵丽颖演个小花痴，唉，张家人找对象要求真的很奇怪</span></p><p><span>不要剪啊啊啊啊啊丫头好伤心的！！！！！这才掉几根，我洗澡都比这掉的多多了！！！！急啥！！！！！！</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><p><span>哇老八好谦虚啊</span><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)"></p><p><span>看这个广告的意思陈皮是和陆建勋搞到一起去了？</span><img src="https://bgm.tv/img/smiles/tv/45.gif" referrerpolicy="no-referrer" alt="(bgm68)"><span>其实我感觉老九门的广告还挺好玩的www</span>
-<span>东东东东东东东东东东北话呢怎么长沙话，看来小哥英语过硬也不是没道理，老冯高度评价张海杏就是活例子啊（？</span></p><hr /><h4 id='ep11'><span>ep11</span></h4><p><span>那大睫毛都快刷到眉毛了你竟然真的认不出来啊</span></p><hr /><h4 id='ep12'><span>ep12</span></h4><p><span>？</span>
-<span>你能断人资金链为啥不从拍卖会开始就找九爷呢</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你早问问九爷是不是家里还能留点东西</span></p><p><span>hhh小贝勒好可爱</span><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)">
-<span>嗨呀这偏心眼子 太坏了</span></p><hr /><h4 id='ep13'><span>ep13</span></h4><p><span>哈哈哈哈这贝勒爷好可爱啊 山海关外我说了算2333</span>
-<span>佛爷：我寻思我也东北的啊23333</span></p><p><span>这俩女人的友谊来的比男人还要快</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
-<span>？？？？？</span>
-<span>等等，可我觉得你更适合我？嗯？佛爷？冷静点？</span></p><p><span>嗨，小舔狗真可爱，爱了爱了</span><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)"><span>这么可爱我也从了</span></p><hr /><h4 id='ep14'><span>ep14</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>软磨硬泡死皮不要脸就可以泡到张家人，我也可以</span>
-<span>什么，这已经不是死皮不要脸了，直接喊夫君（</span></p><p><span>我快看哭了</span><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)"><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)">
-<span>我比谁都希望这个药有用，可我有我的命，二爷还有很长的路要走</span>
-<span>呜呜呜呜呜呜呜呜让她活久一些吧</span><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><span>就算我知道二爷寿终正寝活到102岁但还是好难过</span><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"></p><hr /><h4 id='ep15'><span>ep15</span></h4><p><span>你有病吗把家里搞成这样？</span>
-<span>唉，丫头看的真是难过死我了。。怎么会这么可怜啊</span><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><span>好心疼她……</span>
-<span>原来二爷求药是丫头自己送回去的，我一直都因为那段戏不敢看老九门……误会佛爷了以为是什么儿女情长叽叽歪歪的自私戏码</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>佛爷为了自己老婆不给药之类的，这样的话就好多了</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>不过这种话术你都想的出九爷你是真的狗</span></p><hr /><h4 id='ep16'><span>ep16</span></h4><p><span>tmd 九爷比佛爷高那么大一块，结果小哥一米八花儿才一米七六（178 对不起我记错了</span></p><p><img src="/Users/mucc/Desktop/muccorz.github.io/wiki/doubanimg/26614088/VLxrFkMOPh8qdcg.jpg" alt="VLxrFkMOPh8qdcg" style="zoom:50%;" /></p><p><span>这集太好哭了，一边吃饭一边哭……不过最后，唉，去你妈的尹新月，自私自利，佛爷有事的时候对人家呼来喝去，jb大个东西真当自己能看佛面仗人势了</span>
-<span>而且二爷这段放纵戏真恶心，比失恋了去酒吧那种还恶心，人设都毁了</span>
-<span>//</span>
-<span>唉最近疫情，就经常躺在异国他乡胡思乱想，偶尔想到我老公/我真的确诊了怎么办，再看这段戏，我哭疯</span></p><hr /><h4 id='ep17'><span>ep17</span></h4><p><span>这开头把尹新月的自私自利又刁蛮的嘴脸又给我复习了一遍，翘脚跟二爷说教：我尹新月瞧不起你</span>
-<span>你算什么jb</span><img src="https://bgm.tv/img/smiles/tv/66.gif" referrerpolicy="no-referrer" alt="(bgm89)"><span>还特意强调了一句，佛爷白白挨了你一剑，我寻思舔狗也要遵守基本法不是，佛爷病死了二爷不给你药你不杀他？而且yysy二爷是嫖娼还是干啥管你鸡毛事</span><img src="https://bgm.tv/img/smiles/tv/66.gif" referrerpolicy="no-referrer" alt="(bgm89)"><span>好吃好喝伺候你死了老婆还要听你骂娘，地头蛇基本法可不该惯你北平大小姐</span>
-<span>//</span>
-<span>你们九门人真jb怪，在自己家祖坟打盗洞……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>还有尹新月真的是不知天高地厚的恋爱脑了，她本身不那么菜的话，其实我并不讨厌</span></p><hr /><h4 id='ep18'><span>ep18</span></h4><p><img src="https://bgm.tv/img/smiles/tv/13.gif" referrerpolicy="no-referrer" alt="(bgm36)"><span>裘德考到底是德国人还是美国人啊</span>
-<span>然后那个日本人长的真的很怪</span></p><hr /><h4 id='ep19'><span>ep19</span></h4><p><span>你妈的，这大蛾子给我看死了</span>
-<span>有跟我一样的鳞翅目恐惧症患者，直接跳到19分半，这玩意我真看不了</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)">
-<span>哈哈哈哈哈这陆建勋真是，满世界丢人，还骚2333搞笑担当了</span></p><hr /><h4 id='ep20'><span>ep20</span></h4><p><span>佛爷，吃饼干吗</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
-<span>我挺奇怪一路不管遇到啥危险都非得带着老八干嘛。。</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>他不是都没法自保吗</span>
-<span>佛爷面瘫看的审美疲劳</span></p><hr /><h4 id='ep21'><span>ep21</span></h4><p><span>这霍三娘人中好短，看上去有点地包天</span><img src="https://bgm.tv/img/smiles/tv/21.gif" referrerpolicy="no-referrer" alt="(bgm44)">
-<span>哈哈哈哈哈佛爷受到惊吓这套王八拳23333</span>
-<span>这老矿工完全不聋啊……</span>
-<span>花絮比正片有意思，陈皮挺好看的</span></p><hr /><h4 id='ep22'><span>ep22</span></h4><p><span>佛爷，吃饼干吗</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
-<span>我挺奇怪一路不管遇到啥危险都非得带着老八干嘛。。</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>他不是都没法自保吗</span>
-<span>佛爷面瘫看的审美疲劳</span><img src="/Users/mucc/Desktop/muccorz.github.io/wiki/doubanimg/26614088/hM9z4n5tgNFSWRf.jpg" alt="hM9z4n5tgNFSWRf" style="zoom:50%;" /></p><p><span>在场就你一个女的，哥几个都没提美人计这事，你自己不觉味儿吗</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"></p><hr /><h4 id='ep23'><span>ep23</span></h4><p><span>天呐八爷对家丁好好啊</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>我也想被八爷叫傻孩子（x</span>
-<span>这广告我吐了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>小皮皮小陆陆，怎么这玩意都能出cp的</span></p><hr /><h4 id='ep24'><span>ep24</span></h4><p><span>啥玩意，这张家人怎么长的参差不齐的，我以为大家都很好看呢</span><img src="https://bgm.tv/img/smiles/tv/29.gif" referrerpolicy="no-referrer" alt="(bgm52)">
-<span>“这头发肯定是趁你不注意钻进去的”</span>
-<span>废话，我要是瞅着它我能眼瞅它钻我吗</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"></p><p><span>二爷这得带多少弹珠，感觉身上穿的备不住是十年里坎肩的那种装设备马甲（不</span>
-<span>或者坎肩是个改良了的红家传人（不</span>
-<span>而且说起来用这种高速子弹/弹珠探路，胖子就用过一次，最后是用犀照破的鬼打墙，唉构思有点匮乏哦</span><img src="https://bgm.tv/img/smiles/tv/11.gif" referrerpolicy="no-referrer" alt="(bgm34)"></p><p><span>角色们这家国抱负忠肝义胆的看上去怪怪的……我看个挖坟，又不是学习墙囯，唉</span></p><hr /><h4 id='ep25'><span>ep25</span></h4><p><img src="https://bgm.tv/img/smiles/tv/07.gif" referrerpolicy="no-referrer" alt="(bgm30)"><span>这嫁女儿也太随意了，你起码看看女婿长啥样啊？？？？？？？？？</span>
-<span>我滴妈，张铭恩这两句喊话</span>
-<span>“一定要给我注意安全”</span>
-<span>这表情，这语气</span>
-<span>可千万别演霸总，绝对灾难级</span><img src="https://bgm.tv/img/smiles/tv/07.gif" referrerpolicy="no-referrer" alt="(bgm30)"></p><p><span>九爷身边这个是谁啊，九爷咋啥都跟她说的明明白白，难道是观众吗</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><hr /><h4 id='ep26'><span>ep26</span></h4><p><span>你这退烧药进嘴人就醒了？？？</span><img src="https://bgm.tv/img/smiles/tv/04.gif" referrerpolicy="no-referrer" alt="(bgm27)"><span>要是跟这医生还有啥说不明白的细节描写我可就杀了编剧</span>
-<span>。。。。佛爷拔枪吓我一跳</span><img src="https://bgm.tv/img/smiles/tv/06.gif" referrerpolicy="no-referrer" alt="(bgm29)">
-<img src="https://bgm.tv/img/smiles/tv/13.gif" referrerpolicy="no-referrer" alt="(bgm36)"><span>抓绿色溜达鸡都没抓二爷这么容易，开玩笑呢？？？这放火影海贼里就是tm原创回</span>
-<span>下了个矿是什么大事啊。。。唉</span>
-<span>莫名其妙，狗屁不通</span><img src="https://bgm.tv/img/smiles/tv/06.gif" referrerpolicy="no-referrer" alt="(bgm29)"><span>没看原作就对了</span></p><p><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>剧情突然智商掉线 唉</span></p><hr /><h4 id='ep27'><span>ep27</span></h4><p><span>“佛爷就没一枪毙了他”</span>
-<span>“二爷他被关了这么久，时间拖的越久就越危险balabalabala”</span>
-<img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>这和人问你的有啥关系啊</span></p><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>唉，她真叫霍锦惜啊，名字听玛丽苏，我心思是同人自己编的呢</span>
-<span>这tm的剧情需要有点过分了……人均菜逼了</span></p><hr /><h4 id='ep28'><span>ep28</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>陈皮真是欺师灭祖 唉</span>
-<span>尹新月好起来了</span></p><hr /><h4 id='ep29'><span>ep29</span></h4><p><span>xswl 派霍锦惜色诱二月红……谁色诱谁啊</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><p><span>这东鹏太硬了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><p><span>。。。。。。。。打水这个校园霸凌戏码我真qnmd 什么弱智</span></p><p><span>我好像在小张哥那个故事里看过类似的场面呢</span>
-<span>但是不管怎么说，没走几步就大土司大护法的，有点sb</span></p><hr /><h4 id='ep30'><span>ep30</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>怎么的凭什么就跟人大土司有关系啊……</span></p><p><span>这集结尾有一段zyx拍雨中求药的花絮</span></p><hr /><h4 id='ep31'><span>ep31</span></h4><p><span>.....就非得没完没了的给年轻帅鳏夫安排艳遇是吧</span>
-<span>目前全剧最弱智就是这个大土司了吧</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><p><span>唉这个大土司能不能别把啥心理活动都说出来啊，你回去杀不杀管人家啥事啊，还他们一定没想到我能活到现在，几分钟之前还差点死了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>明明你自己也没想到吧</span>
-<span>分分钟无能狂怒，一惊一乍</span></p><p><span>？？？</span>
-<span>“先回白桥从长计议”</span>
-<span>“没错，黑桥再凶险也比不过我白桥的内斗”</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>这女人真是顶级理解，是不是其实不怎么会说也听不太懂汉人说话</span></p><p><span>顺便二爷这套红的真难看哦</span></p><hr /><h4 id='ep32'><span>ep32</span></h4><p><span>。。。。。。什么狗屁</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>白乔寨这段到底是什么睿智剧本啊，妥妥的傻逼女人</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>不会写女性角色就少写点吧，一个赛一个的贱</span></p><p><span>“她算什么聪明人”</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>你也有脸说这话</span></p><hr /><h4 id='ep33'><span>ep33</span></h4><p><span>？？？？佛爷竟然去过蝎子墓吗？？？？分家也配？？？？？</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>那不是和小哥同龄人了</span>
-<span>哦，不是内斗，我傻了</span></p><p><span>？？？？？？？？？？？找东北老家就不能问问张副官？？？？？？？？？？？？？？？？干啥呢在这？？？？？？？？？？？？？？？？？？</span></p><p><span>“我以为你知道啊。”</span>
-<span>行</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"></p><hr /><h4 id='ep34'><span>ep34</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>逻辑越来越完蛋了</span>
-<span>晚上</span>
-<span>我们两个</span>
-<span>方便</span></p><hr /><h4 id='ep35'><span>ep35</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>开始二倍速了</span></p><hr /><h4 id='ep36'><span>ep36</span></h4><p><span>这个辣鸡心魔的设定怎么还没完事，怎么不去写哈利波特呢</span></p><hr /><h4 id='ep37'><span>ep37</span></h4><p><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>这回忆杀老太太裹脚布</span>
-<span>//</span>
-<span>有些人可能就是更适合无限月读的世界呢</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>有些日漫套路了，说真的，佛爷你就是个挖坟的，你懂个屁的二月红，目前为止后期节奏透着一股精神火影TV粉的气质</span>
-<span>//</span>
-<span>这个套娃戏也太拙劣了。。还有陈皮遇到丫头之前那段打戏……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>尬</span></p><hr /><h4 id='ep38'><span>ep38</span></h4><p><span>……</span>
-<span>跟我俩拉尔斯和真实女孩呢</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)">
-<span>这无限月读戏怎么能写的这么难看</span>
-<span>一群“为了你好”的道德绑架老妈子，你们自己想走就走啊，磨磨唧唧絮絮叨叨</span></p><hr /><h4 id='ep39'><span>ep39</span></h4><p><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>屎</span></p><p><span>裘德考这个角色真的算了吧</span>
-<span>这哪是外国人，这是天龙人</span></p><hr /><h4 id='ep40'><span>ep40</span></h4><p><span>。。这陈皮小时候的戏越描越黑啊</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>从小就那么小人得志</span></p><hr /><h4 id='ep41'><span>ep41</span></h4><p><span>这在莫名其妙的地方安排反派内心戏，堪比东京食尸鬼</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>屑死了屑死了</span>
-<span>不是说用一句理智全失就能完全不顾逻辑……希望各位创作者能够明白</span>
-<img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p><hr /><h4 id='ep42'><span>ep42</span></h4><p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>唉 八爷真是全剧观感担当 前后起码人设能保持一致</span>
-<span>这个霍家长辈好像和那个日本女的一个cv呢</span></p><p><span>霍仙姑辈分这么小？？？竟然比其他的九门老辈小一辈</span></p><hr /><h4 id='ep43'><span>ep43</span></h4><p><span>这个大夫是不是三叔。。。</span>
-<span>这莫医生这几个问题问的，绝了，盲狙三杀</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>另外尹新月为什么明知道二爷不会找别的女人还非得给人家往一块凑啊</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>啥年代连鳏夫都看不过眼吗</span></p><p><span>民国时候竟然分级诊疗？？？</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>张日山比佛爷可爱太多x</span>
-<span>不看沙海他也还是可爱</span><img src="https://bgm.tv/img/smiles/tv/13.gif" referrerpolicy="no-referrer" alt="(bgm36)"></p><hr /><h4 id='ep44'><span>ep44</span></h4><p><span>尹新月：我知道他忘不了丫头，但我想让他和我表妹在一起</span>
-<img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你表妹都他妈快死了你还替她惦记老爷们</span></p><hr /><h4 id='ep45'><span>ep45</span></h4><p><span>这东鹏特饮绝了</span>
-<span>所以这他妈日本人的阴毛和矿山到底有球关系</span></p><p><span>害，二爷求你妹来的吗</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>还扣上帽子了</span></p><p><span>糙 迷惑二爷</span></p><hr /><h4 id='ep46'><span>ep46</span></h4><p><span>。。</span>
-<span>这对麦高芬的追求真的</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你起码自圆其说啊，目前为止陨铜真的在日本人手里0作用好吧</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你不瞎起哄跟着找这玩意长沙还没这么乱</span></p><p><span>。。。。。。</span>
-<img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>无话可说</span></p><hr /><h4 id='ep47'><span>ep47</span></h4><p><span>？？？你自己给人放了然后再撒丫子出来追</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>唉 炼制病毒。。唉</span>
-<span>……</span>
-<span>倒数第二集了，还在这不紧不慢</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>看得我好丧啊。。如果是追连载的话可能看到30多就弃了</span></p><p><span>“孽障，今天为师就要清理门户！”</span>
-<span>为什么不告诉他簪子的事——“丫头一直关心陈皮，我想这可能也是丫头的意思。”</span>
-<img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>啊？</span>
-<span>死可以死，但不能让他内疚？</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>啊？</span></p><p><span>？？？七步之内必有解药说的不是……草啥的吗，你这？人？围着人长解药呗？</span></p><hr /><h4 id='ep48'><span>ep48</span></h4><p><span>他们打麻将竟然带三娘不带老狗？她不都卸任了吗？</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>前面还说齐家只送算……这就一字一个铜板了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
-<span>唉真的八爷我觉得你就别上了。。</span></p></div></div>
+
+<body class='typora-export'>
+    <div class='typora-export-content'>
+        <div id='write' class=''>
+            <h4 id='ep1'><span>ep1</span></h4>
+            <p><span>“他是哪个省来的，让他永远不能离开长沙城”</span>
+                <span>所以哪个省来的难道不是纯好奇嘛……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>。。。二爷这个丫头有点黑</span></p>
+            <hr />
+            <h4 id='ep2'><span>ep2</span></h4>
+            <p><span>丫头那个面真的xswl</span>
+                <span>讲真丫头演员可以再找好看一点，哪怕演技烂呢……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>不然真的不能理解二爷这么完美的男人为什么对她一见钟情</span>
+                <span>我真不行了</span>
+                <span>我要给丫头那个面笑死了，二爷你要是被强迫了就眨眨眼</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <hr />
+            <h4 id='ep3'><span>ep3</span></h4>
+            <p><span>陈伟霆：这个叫什么，这个叫乱炖是吗（尬笑</span>
+                <span>我（*%T#%￥……%&amp;……#￥</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>你是个东北人啊你在说nm呢</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)"><span>人张日山都说了我老家也这么吃，你俩不是一家的吗</span><img src="https://bgm.tv/img/smiles/tv/61.gif" referrerpolicy="no-referrer" alt="(bgm84)"><img src="https://bgm.tv/img/smiles/tv/61.gif" referrerpolicy="no-referrer"
+                    alt="(bgm84)">
+                <span>其实仔细想想张家人都是母么东北人还挺带感</span></p>
+            <p><span>八爷真好看，我怀疑他们九门成立的时候除了看倒斗能力声望啥的还要看脸吧，有名有姓的几乎都是好看人，所以我们甚至不知道胖子叫什么</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"></p>
+            <p><span>佛爷，睿智（拇指</span></p>
+            <p><span>这日语配音。。</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"></p>
+            <p><span>二爷这一身黑好看死了</span><img src="https://bgm.tv/img/smiles/tv/42.gif" referrerpolicy="no-referrer" alt="(bgm65)"></p>
+            <hr />
+            <h4 id='ep4'><span>ep4</span></h4>
+            <p><span>你那是孝顺师娘吗，你那是……</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)">
+                <span>这里zyx有点不像他了，好爷们儿（？</span>
+                <span>看完沙海再回来看这个，张日山的角色形象出入有点大，这里看着不大机敏。。</span>
+                <span>丫头的戏都好苦啊</span><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)"><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)">
+                <span>抢钱不打我还给他上供吗？？？</span><img src="https://bgm.tv/img/smiles/tv/04.gif" referrerpolicy="no-referrer" alt="(bgm27)"><span>？？？？？还真就给他上供</span><img src="https://bgm.tv/img/smiles/bgm/13.png" referrerpolicy="no-referrer" alt="(bgm13)">
+                <span>嗯？陈皮竟然没有对那个小孩做什么。。我还以为那个小孩会是个骗子啥的被他做掉</span></p>
+            <hr />
+            <h4 id='ep5'><span>ep5</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>我在做电饭锅蛋糕 打了一集鸡蛋也没发</span></p>
+            <hr />
+            <h4 id='ep6'><span>ep6</span></h4>
+            <p><span>这基佬照相我还以为要给二爷来一下子，没想到只是个普通照相</span>
+                <span>大蛾子我死了</span>
+                <span>两集了 鸡蛋还是没打发</span></p>
+            <hr />
+            <h3 id='ep7'><span>ep7</span></h3>
+            <p><span>//我懒得打发了 直接下锅蒸 蒸的还能吃 还挺好 电饭锅的不知道怎么样了……</span>
+                <span>这个陆建勋有些低配</span>
+                <span>八爷这个书生装可爱！</span><img src="https://bgm.tv/img/smiles/tv/27.gif" referrerpolicy="no-referrer" alt="(bgm50)"></p>
+            <p><img src="SzVYLud5gfH3lP7.jpg" alt="SzVYLud5gfH3lP7" style="zoom:50%;" /></p>
+            <p><span>yysy八爷这个颜 能打的</span></p>
+            <p><span>//蛋糕大成功</span></p>
+            <hr />
+            <h4 id='ep8'><span>ep8</span></h4>
+            <p><span>我第一次看出演员用替身。。。这一脚飞踹挡脸也太（</span>
+                <span>zyx这小眼神奶凶奶凶的</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
+                <span>呜呜呜呜这是什么玛丽苏好羡慕呜呜呜呜丫头幸福死了</span><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif"
+                    referrerpolicy="no-referrer" alt="(bgm41)"><span>真希望她能多陪陪二爷啊</span>
+                <span>我觉得有点（ry</span>
+                <span>其实可能有别的解决方法，比如跟二爷说你不去我就自己去，你不告诉我你知道的事我必死，让二爷告诉你你自己去呗，丫头都说了祖辈没有一个人活着出来，你还跟人家说要以国为重戴高帽？谁能看着自己爱人去送死呢……到时候就算人真的没出来，丫头会让你偿命还是怎么？你这性命担保在对方也是性命之虞的前提下毫无价值啊，张启山话术一级烂了</span>
+                <span>桃花说：这是别人羡慕不来的好福气啊</span>
+                <img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)"><span>然后丫头的表情看得我好难过……哭</span></p>
+            <p><span>啊啊啊亲手手，我的丫头，什么都好</span><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif"
+                    referrerpolicy="no-referrer" alt="(bgm43)"><span>呜呜呜呜呜呜</span></p>
+            <p><span>说起来我才意识到zyx就是长沙人</span></p>
+            <hr />
+            <h4 id='ep9'><span>ep9</span></h4>
+            <p><span>二爷这家伙事儿，看着跟蟹八件似的</span></p>
+            <p><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)"><span>天火同人雷风恒，泽风大过山水蒙，善恶到头谁来报，举头三尺有神明，易经八卦乾坤手，翻云覆雨几多情</span>
+                <span>？？？？竟然认识二爷的吗</span></p>
+            <p><span>我没有想到二爷出手就是这样一记直拳</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>艹张启山这出招23333这哪是佛爷这分明是奎爷</span></p>
+            <hr />
+            <h4 id='ep10'><span>ep10</span></h4>
+            <p><span>原来赵丽颖演个小花痴，唉，张家人找对象要求真的很奇怪</span></p>
+            <p><span>不要剪啊啊啊啊啊丫头好伤心的！！！！！这才掉几根，我洗澡都比这掉的多多了！！！！急啥！！！！！！</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <p><span>哇老八好谦虚啊</span><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)"></p>
+            <p><span>看这个广告的意思陈皮是和陆建勋搞到一起去了？</span><img src="https://bgm.tv/img/smiles/tv/45.gif" referrerpolicy="no-referrer" alt="(bgm68)"><span>其实我感觉老九门的广告还挺好玩的www</span>
+                <span>东东东东东东东东东东北话呢怎么长沙话，看来小哥英语过硬也不是没道理，老冯高度评价张海杏就是活例子啊（？</span></p>
+            <hr />
+            <h4 id='ep11'><span>ep11</span></h4>
+            <p><span>那大睫毛都快刷到眉毛了你竟然真的认不出来啊</span></p>
+            <hr />
+            <h4 id='ep12'><span>ep12</span></h4>
+            <p><span>？</span>
+                <span>你能断人资金链为啥不从拍卖会开始就找九爷呢</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你早问问九爷是不是家里还能留点东西</span></p>
+            <p><span>hhh小贝勒好可爱</span><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)">
+                <span>嗨呀这偏心眼子 太坏了</span></p>
+            <hr />
+            <h4 id='ep13'><span>ep13</span></h4>
+            <p><span>哈哈哈哈这贝勒爷好可爱啊 山海关外我说了算2333</span>
+                <span>佛爷：我寻思我也东北的啊23333</span></p>
+            <p><span>这俩女人的友谊来的比男人还要快</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
+                <span>？？？？？</span>
+                <span>等等，可我觉得你更适合我？嗯？佛爷？冷静点？</span></p>
+            <p><span>嗨，小舔狗真可爱，爱了爱了</span><img src="https://bgm.tv/img/smiles/tv/14.gif" referrerpolicy="no-referrer" alt="(bgm37)"><span>这么可爱我也从了</span></p>
+            <hr />
+            <h4 id='ep14'><span>ep14</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>软磨硬泡死皮不要脸就可以泡到张家人，我也可以</span>
+                <span>什么，这已经不是死皮不要脸了，直接喊夫君（</span></p>
+            <p><span>我快看哭了</span><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)"><img src="https://bgm.tv/img/smiles/tv/19.gif" referrerpolicy="no-referrer" alt="(bgm42)">
+                <span>我比谁都希望这个药有用，可我有我的命，二爷还有很长的路要走</span>
+                <span>呜呜呜呜呜呜呜呜让她活久一些吧</span><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><span>就算我知道二爷寿终正寝活到102岁但还是好难过</span><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)">
+                <img
+                    src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"><img src="https://bgm.tv/img/smiles/tv/20.gif" referrerpolicy="no-referrer" alt="(bgm43)"></p>
+            <hr />
+            <h4 id='ep15'><span>ep15</span></h4>
+            <p><span>你有病吗把家里搞成这样？</span>
+                <span>唉，丫头看的真是难过死我了。。怎么会这么可怜啊</span><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif"
+                    referrerpolicy="no-referrer" alt="(bgm41)"><img src="https://bgm.tv/img/smiles/tv/18.gif" referrerpolicy="no-referrer" alt="(bgm41)"><span>好心疼她……</span>
+                <span>原来二爷求药是丫头自己送回去的，我一直都因为那段戏不敢看老九门……误会佛爷了以为是什么儿女情长叽叽歪歪的自私戏码</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>佛爷为了自己老婆不给药之类的，这样的话就好多了</span><img src="https://bgm.tv/img/smiles/tv/16.gif"
+                    referrerpolicy="no-referrer" alt="(bgm39)"><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>不过这种话术你都想的出九爷你是真的狗</span></p>
+            <hr />
+            <h4 id='ep16'><span>ep16</span></h4>
+            <p><span>tmd 九爷比佛爷高那么大一块，结果小哥一米八花儿才一米七六（178 对不起我记错了</span></p>
+            <p><img src="VLxrFkMOPh8qdcg.jpg" alt="VLxrFkMOPh8qdcg" style="zoom:50%;" /></p>
+            <p><span>这集太好哭了，一边吃饭一边哭……不过最后，唉，去你妈的尹新月，自私自利，佛爷有事的时候对人家呼来喝去，jb大个东西真当自己能看佛面仗人势了</span>
+                <span>而且二爷这段放纵戏真恶心，比失恋了去酒吧那种还恶心，人设都毁了</span>
+                <span>//</span>
+                <span>唉最近疫情，就经常躺在异国他乡胡思乱想，偶尔想到我老公/我真的确诊了怎么办，再看这段戏，我哭疯</span></p>
+            <hr />
+            <h4 id='ep17'><span>ep17</span></h4>
+            <p><span>这开头把尹新月的自私自利又刁蛮的嘴脸又给我复习了一遍，翘脚跟二爷说教：我尹新月瞧不起你</span>
+                <span>你算什么jb</span><img src="https://bgm.tv/img/smiles/tv/66.gif" referrerpolicy="no-referrer" alt="(bgm89)"><span>还特意强调了一句，佛爷白白挨了你一剑，我寻思舔狗也要遵守基本法不是，佛爷病死了二爷不给你药你不杀他？而且yysy二爷是嫖娼还是干啥管你鸡毛事</span><img src="https://bgm.tv/img/smiles/tv/66.gif"
+                    referrerpolicy="no-referrer" alt="(bgm89)"><span>好吃好喝伺候你死了老婆还要听你骂娘，地头蛇基本法可不该惯你北平大小姐</span>
+                <span>//</span>
+                <span>你们九门人真jb怪，在自己家祖坟打盗洞……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>还有尹新月真的是不知天高地厚的恋爱脑了，她本身不那么菜的话，其实我并不讨厌</span></p>
+            <hr />
+            <h4 id='ep18'><span>ep18</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/13.gif" referrerpolicy="no-referrer" alt="(bgm36)"><span>裘德考到底是德国人还是美国人啊</span>
+                <span>然后那个日本人长的真的很怪</span></p>
+            <hr />
+            <h4 id='ep19'><span>ep19</span></h4>
+            <p><span>你妈的，这大蛾子给我看死了</span>
+                <span>有跟我一样的鳞翅目恐惧症患者，直接跳到19分半，这玩意我真看不了</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)">
+                <span>哈哈哈哈哈这陆建勋真是，满世界丢人，还骚2333搞笑担当了</span></p>
+            <hr />
+            <h4 id='ep20'><span>ep20</span></h4>
+            <p><span>佛爷，吃饼干吗</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
+                <span>我挺奇怪一路不管遇到啥危险都非得带着老八干嘛。。</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>他不是都没法自保吗</span>
+                <span>佛爷面瘫看的审美疲劳</span></p>
+            <hr />
+            <h4 id='ep21'><span>ep21</span></h4>
+            <p><span>这霍三娘人中好短，看上去有点地包天</span><img src="https://bgm.tv/img/smiles/tv/21.gif" referrerpolicy="no-referrer" alt="(bgm44)">
+                <span>哈哈哈哈哈佛爷受到惊吓这套王八拳23333</span>
+                <span>这老矿工完全不聋啊……</span>
+                <span>花絮比正片有意思，陈皮挺好看的</span></p>
+            <hr />
+            <h4 id='ep22'><span>ep22</span></h4>
+            <p><span>佛爷，吃饼干吗</span><img src="https://bgm.tv/img/smiles/tv/12.gif" referrerpolicy="no-referrer" alt="(bgm35)">
+                <span>我挺奇怪一路不管遇到啥危险都非得带着老八干嘛。。</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>他不是都没法自保吗</span>
+                <span>佛爷面瘫看的审美疲劳</span><img src="hM9z4n5tgNFSWRf.jpg" alt="hM9z4n5tgNFSWRf" style="zoom:50%;" /></p>
+            <p><span>在场就你一个女的，哥几个都没提美人计这事，你自己不觉味儿吗</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"></p>
+            <hr />
+            <h4 id='ep23'><span>ep23</span></h4>
+            <p><span>天呐八爷对家丁好好啊</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>我也想被八爷叫傻孩子（x</span>
+                <span>这广告我吐了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>小皮皮小陆陆，怎么这玩意都能出cp的</span></p>
+            <hr
+            />
+            <h4 id='ep24'><span>ep24</span></h4>
+            <p><span>啥玩意，这张家人怎么长的参差不齐的，我以为大家都很好看呢</span><img src="https://bgm.tv/img/smiles/tv/29.gif" referrerpolicy="no-referrer" alt="(bgm52)">
+                <span>“这头发肯定是趁你不注意钻进去的”</span>
+                <span>废话，我要是瞅着它我能眼瞅它钻我吗</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"></p>
+            <p><span>二爷这得带多少弹珠，感觉身上穿的备不住是十年里坎肩的那种装设备马甲（不</span>
+                <span>或者坎肩是个改良了的红家传人（不</span>
+                <span>而且说起来用这种高速子弹/弹珠探路，胖子就用过一次，最后是用犀照破的鬼打墙，唉构思有点匮乏哦</span><img src="https://bgm.tv/img/smiles/tv/11.gif" referrerpolicy="no-referrer" alt="(bgm34)"></p>
+            <p><span>角色们这家国抱负忠肝义胆的看上去怪怪的……我看个挖坟，又不是学习墙囯，唉</span></p>
+            <hr />
+            <h4 id='ep25'><span>ep25</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/07.gif" referrerpolicy="no-referrer" alt="(bgm30)"><span>这嫁女儿也太随意了，你起码看看女婿长啥样啊？？？？？？？？？</span>
+                <span>我滴妈，张铭恩这两句喊话</span>
+                <span>“一定要给我注意安全”</span>
+                <span>这表情，这语气</span>
+                <span>可千万别演霸总，绝对灾难级</span><img src="https://bgm.tv/img/smiles/tv/07.gif" referrerpolicy="no-referrer" alt="(bgm30)"></p>
+            <p><span>九爷身边这个是谁啊，九爷咋啥都跟她说的明明白白，难道是观众吗</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <hr />
+            <h4 id='ep26'><span>ep26</span></h4>
+            <p><span>你这退烧药进嘴人就醒了？？？</span><img src="https://bgm.tv/img/smiles/tv/04.gif" referrerpolicy="no-referrer" alt="(bgm27)"><span>要是跟这医生还有啥说不明白的细节描写我可就杀了编剧</span>
+                <span>。。。。佛爷拔枪吓我一跳</span><img src="https://bgm.tv/img/smiles/tv/06.gif" referrerpolicy="no-referrer" alt="(bgm29)">
+                <img src="https://bgm.tv/img/smiles/tv/13.gif" referrerpolicy="no-referrer" alt="(bgm36)"><span>抓绿色溜达鸡都没抓二爷这么容易，开玩笑呢？？？这放火影海贼里就是tm原创回</span>
+                <span>下了个矿是什么大事啊。。。唉</span>
+                <span>莫名其妙，狗屁不通</span><img src="https://bgm.tv/img/smiles/tv/06.gif" referrerpolicy="no-referrer" alt="(bgm29)"><span>没看原作就对了</span></p>
+            <p><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>剧情突然智商掉线 唉</span></p>
+            <hr />
+            <h4 id='ep27'><span>ep27</span></h4>
+            <p><span>“佛爷就没一枪毙了他”</span>
+                <span>“二爷他被关了这么久，时间拖的越久就越危险balabalabala”</span>
+                <img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>这和人问你的有啥关系啊</span></p>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>唉，她真叫霍锦惜啊，名字听玛丽苏，我心思是同人自己编的呢</span>
+                <span>这tm的剧情需要有点过分了……人均菜逼了</span></p>
+            <hr />
+            <h4 id='ep28'><span>ep28</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>陈皮真是欺师灭祖 唉</span>
+                <span>尹新月好起来了</span></p>
+            <hr />
+            <h4 id='ep29'><span>ep29</span></h4>
+            <p><span>xswl 派霍锦惜色诱二月红……谁色诱谁啊</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <p><span>这东鹏太硬了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <p><span>。。。。。。。。打水这个校园霸凌戏码我真qnmd 什么弱智</span></p>
+            <p><span>我好像在小张哥那个故事里看过类似的场面呢</span>
+                <span>但是不管怎么说，没走几步就大土司大护法的，有点sb</span></p>
+            <hr />
+            <h4 id='ep30'><span>ep30</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer"
+                    alt="(bgm38)"><span>怎么的凭什么就跟人大土司有关系啊……</span></p>
+            <p><span>这集结尾有一段zyx拍雨中求药的花絮</span></p>
+            <hr />
+            <h4 id='ep31'><span>ep31</span></h4>
+            <p><span>.....就非得没完没了的给年轻帅鳏夫安排艳遇是吧</span>
+                <span>目前全剧最弱智就是这个大土司了吧</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <p><span>唉这个大土司能不能别把啥心理活动都说出来啊，你回去杀不杀管人家啥事啊，还他们一定没想到我能活到现在，几分钟之前还差点死了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer"
+                    alt="(bgm38)"><span>明明你自己也没想到吧</span>
+                <span>分分钟无能狂怒，一惊一乍</span></p>
+            <p><span>？？？</span>
+                <span>“先回白桥从长计议”</span>
+                <span>“没错，黑桥再凶险也比不过我白桥的内斗”</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)"><span>这女人真是顶级理解，是不是其实不怎么会说也听不太懂汉人说话</span></p>
+            <p><span>顺便二爷这套红的真难看哦</span></p>
+            <hr />
+            <h4 id='ep32'><span>ep32</span></h4>
+            <p><span>。。。。。。什么狗屁</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)"><span>白乔寨这段到底是什么睿智剧本啊，妥妥的傻逼女人</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer"
+                    alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>不会写女性角色就少写点吧，一个赛一个的贱</span></p>
+            <p><span>“她算什么聪明人”</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>你也有脸说这话</span></p>
+            <hr />
+            <h4 id='ep33'><span>ep33</span></h4>
+            <p><span>？？？？佛爷竟然去过蝎子墓吗？？？？分家也配？？？？？</span><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><img src="https://bgm.tv/img/smiles/tv/16.gif" referrerpolicy="no-referrer" alt="(bgm39)"><span>那不是和小哥同龄人了</span>
+                <span>哦，不是内斗，我傻了</span></p>
+            <p><span>？？？？？？？？？？？找东北老家就不能问问张副官？？？？？？？？？？？？？？？？干啥呢在这？？？？？？？？？？？？？？？？？？</span></p>
+            <p><span>“我以为你知道啊。”</span>
+                <span>行</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"></p>
+            <hr />
+            <h4 id='ep34'><span>ep34</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>逻辑越来越完蛋了</span>
+                <span>晚上</span>
+                <span>我们两个</span>
+                <span>方便</span></p>
+            <hr />
+            <h4 id='ep35'><span>ep35</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>开始二倍速了</span></p>
+            <hr />
+            <h4 id='ep36'><span>ep36</span></h4>
+            <p><span>这个辣鸡心魔的设定怎么还没完事，怎么不去写哈利波特呢</span></p>
+            <hr />
+            <h4 id='ep37'><span>ep37</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>这回忆杀老太太裹脚布</span>
+                <span>//</span>
+                <span>有些人可能就是更适合无限月读的世界呢</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>有些日漫套路了，说真的，佛爷你就是个挖坟的，你懂个屁的二月红，目前为止后期节奏透着一股精神火影TV粉的气质</span>
+                <span>//</span>
+                <span>这个套娃戏也太拙劣了。。还有陈皮遇到丫头之前那段打戏……</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>尬</span></p>
+            <hr />
+            <h4 id='ep38'><span>ep38</span></h4>
+            <p><span>……</span>
+                <span>跟我俩拉尔斯和真实女孩呢</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)">
+                <span>这无限月读戏怎么能写的这么难看</span>
+                <span>一群“为了你好”的道德绑架老妈子，你们自己想走就走啊，磨磨唧唧絮絮叨叨</span></p>
+            <hr />
+            <h4 id='ep39'><span>ep39</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>屎</span></p>
+            <p><span>裘德考这个角色真的算了吧</span>
+                <span>这哪是外国人，这是天龙人</span></p>
+            <hr />
+            <h4 id='ep40'><span>ep40</span></h4>
+            <p><span>。。这陈皮小时候的戏越描越黑啊</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>从小就那么小人得志</span></p>
+            <hr />
+            <h4 id='ep41'><span>ep41</span></h4>
+            <p><span>这在莫名其妙的地方安排反派内心戏，堪比东京食尸鬼</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>屑死了屑死了</span>
+                <span>不是说用一句理智全失就能完全不顾逻辑……希望各位创作者能够明白</span>
+                <img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"></p>
+            <hr />
+            <h4 id='ep42'><span>ep42</span></h4>
+            <p><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>唉 八爷真是全剧观感担当 前后起码人设能保持一致</span>
+                <span>这个霍家长辈好像和那个日本女的一个cv呢</span></p>
+            <p><span>霍仙姑辈分这么小？？？竟然比其他的九门老辈小一辈</span></p>
+            <hr />
+            <h4 id='ep43'><span>ep43</span></h4>
+            <p><span>这个大夫是不是三叔。。。</span>
+                <span>这莫医生这几个问题问的，绝了，盲狙三杀</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>另外尹新月为什么明知道二爷不会找别的女人还非得给人家往一块凑啊</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>啥年代连鳏夫都看不过眼吗</span></p>
+            <p><span>民国时候竟然分级诊疗？？？</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>张日山比佛爷可爱太多x</span>
+                <span>不看沙海他也还是可爱</span><img src="https://bgm.tv/img/smiles/tv/13.gif" referrerpolicy="no-referrer" alt="(bgm36)"></p>
+            <hr />
+            <h4 id='ep44'><span>ep44</span></h4>
+            <p><span>尹新月：我知道他忘不了丫头，但我想让他和我表妹在一起</span>
+                <img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你表妹都他妈快死了你还替她惦记老爷们</span></p>
+            <hr />
+            <h4 id='ep45'><span>ep45</span></h4>
+            <p><span>这东鹏特饮绝了</span>
+                <span>所以这他妈日本人的阴毛和矿山到底有球关系</span></p>
+            <p><span>害，二爷求你妹来的吗</span><img src="https://bgm.tv/img/smiles/tv/93.gif" referrerpolicy="no-referrer" alt="(bgm116)"><span>还扣上帽子了</span></p>
+            <p><span>糙 迷惑二爷</span></p>
+            <hr />
+            <h4 id='ep46'><span>ep46</span></h4>
+            <p><span>。。</span>
+                <span>这对麦高芬的追求真的</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif"
+                    referrerpolicy="no-referrer" alt="(bgm38)"><span>你起码自圆其说啊，目前为止陨铜真的在日本人手里0作用好吧</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer"
+                    alt="(bgm38)"><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>你不瞎起哄跟着找这玩意长沙还没这么乱</span></p>
+            <p><span>。。。。。。</span>
+                <img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>无话可说</span></p>
+            <hr />
+            <h4 id='ep47'><span>ep47</span></h4>
+            <p><span>？？？你自己给人放了然后再撒丫子出来追</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>唉 炼制病毒。。唉</span>
+                <span>……</span>
+                <span>倒数第二集了，还在这不紧不慢</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>看得我好丧啊。。如果是追连载的话可能看到30多就弃了</span></p>
+            <p><span>“孽障，今天为师就要清理门户！”</span>
+                <span>为什么不告诉他簪子的事——“丫头一直关心陈皮，我想这可能也是丫头的意思。”</span>
+                <img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>啊？</span>
+                <span>死可以死，但不能让他内疚？</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)"><span>啊？</span></p>
+            <p><span>？？？七步之内必有解药说的不是……草啥的吗，你这？人？围着人长解药呗？</span></p>
+            <hr />
+            <h4 id='ep48'><span>ep48</span></h4>
+            <p><span>他们打麻将竟然带三娘不带老狗？她不都卸任了吗？</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>前面还说齐家只送算……这就一字一个铜板了</span><img src="https://bgm.tv/img/smiles/tv/15.gif" referrerpolicy="no-referrer" alt="(bgm38)">
+                <span>唉真的八爷我觉得你就别上了。。</span></p>
+        </div>
+    </div>
 </body>
+
 </html>
