@@ -82,6 +82,7 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     margin-top: 0;
+    border-width: 2px;
 }
 
 .paging_container,
