@@ -28,16 +28,16 @@ body {
     content: "是个废物•ᴗ•\a只有观看收藏\a本质是豆瓣难民营\a没有IT人的自我介绍\a且因为技术有限\a*加载较慢*";
     width: 190px;
     height: 190px;
-    background: #fdffd7;
+    background: #f5ff30;
     border-radius: 10px 115px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    color: #736f6ffa;
+    color: #daa51dfa;
     font-size: 13px;
     letter-spacing: 3px;
-    box-shadow: inset 0px 0px 15px 5px #abad8a;
+    box-shadow: inset 0px 0px 15px 5px #8c773e;
     white-space: pre;
     text-align: center;
 }
