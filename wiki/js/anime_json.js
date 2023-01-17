@@ -21,11 +21,9 @@ $(function() {
                     $("li:eq(" + k + ") .box").append(("<h1>" + v.title + "</h1>"));
                 }
 
-                // $("li:eq(" + k + ") .box").append(("<h1 >" + v.title + "</h1>"));
+
                 $("li:eq(" + k + ") .box").append(("<little class='namech'>" + v.namech + "</>"));
-                // $("li:eq(" + k + ") .box").append(("<p class='time'>" + v.time + "</p>"));
-                // $("li:eq(" + k + ") .box").append(("<p class='text'>" + v.paragraph + "</p>"));
-                // 日期
+
                 var date = new Date(v.date * 1000);
                 Y = date.getFullYear() + '-';
                 M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
