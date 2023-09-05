@@ -38,6 +38,13 @@ body {
     align-items: center;
 }
 
+.paging_container h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #262626;
+    margin-bottom: 0;
+}
+
 .paging_container {
     width: 60%;
     margin: 50px auto;
@@ -48,13 +55,6 @@ body {
         width: 90%;
         margin: 50px auto;
     }
-}
-
-.paging_container h1 {
-    font-size: 18px;
-    font-weight: 500;
-    color: #262626;
-    margin-bottom: 0;
 }
 
 .paging_container .time {
