@@ -6,16 +6,6 @@
     list-style: none;
 } */
 
-
-/* 响应式 */
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-}
-
-
-/* 响应式 */
-
 body {
     margin-bottom: 50px;
 }
@@ -56,10 +46,11 @@ body {
 @media only screen and (max-width: 1080px) {
     .paging_container {
         width: 90%;
+        font-size: 14px;
     }
 }
 
-.paging_container h1 {
+n8 .paging_container h1 {
     font-size: 18px;
     font-weight: 500;
     color: #262626;
