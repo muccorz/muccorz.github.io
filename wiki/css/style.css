@@ -46,11 +46,10 @@ body {
 @media only screen and (max-width: 1080px) {
     .paging_container {
         width: 90%;
-        font-size: 14px;
     }
 }
 
-n8 .paging_container h1 {
+.paging_container h1 {
     font-size: 18px;
     font-weight: 500;
     color: #262626;
