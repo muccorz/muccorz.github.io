@@ -53,6 +53,12 @@ body {
     margin: 50px auto;
 }
 
+@media only screen and (max-width: 768px) {
+    .paging_container {
+        width: 90%;
+    }
+}
+
 .paging_container h1 {
     font-size: 18px;
     font-weight: 500;
