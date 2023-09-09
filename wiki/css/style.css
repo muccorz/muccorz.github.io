@@ -92,6 +92,15 @@ h1:hover {
     color: #7f7f7f;
 }
 
+.newpage {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #EF919A;
+    margin-bottom: 0;
+}
+
 @media only screen and (max-width: 1080px) {
     .paging_container {
         width: 90%;
@@ -108,6 +117,9 @@ h1:hover {
     }
     .namech {
         font-size: 2vw;
+    }
+    .newpage {
+        font-size: 2.5vw;
     }
 }
 
@@ -344,12 +356,3 @@ section h2 {
 
 
 /* 新页 */
-
-.newpage {
-    display: block;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    color: #EF919A;
-    margin-bottom: 0;
-}
