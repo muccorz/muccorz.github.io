@@ -10,6 +10,10 @@ body {
     margin-bottom: 50px;
 }
 
+ul {
+    padding: 0;
+}
+
 .img img {
     border-radius: 5px;
     display: block;
@@ -110,7 +114,7 @@ h1:hover {
         /* 设置手机访问时的字体大小 */
     }
     .paging_container h1 {
-        font-size: 4vw;
+        font-size: 3vw;
     }
     .paging_container .time {
         font-size: 2vw;
@@ -119,7 +123,7 @@ h1:hover {
         font-size: 2vw;
     }
     .newpage {
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 }
 
