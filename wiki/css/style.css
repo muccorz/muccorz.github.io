@@ -50,25 +50,6 @@ body {
     margin: 50px auto;
 }
 
-@media only screen and (max-width: 1080px) {
-    .paging_container {
-        width: 90%;
-    }
-    .paging_container .text {
-        font-size: 3vw;
-        /* 设置手机访问时的字体大小 */
-    }
-    .paging_container h1 {
-        font-size: 4vw;
-    }
-    .paging_container .time {
-        font-size: 2vw;
-    }
-    .namech {
-        font-size: 2vw;
-    }
-}
-
 .paging_container .time {
     font-size: 12px;
 }
@@ -109,6 +90,25 @@ h1:hover {
 .time {
     margin: 8px auto;
     color: #7f7f7f;
+}
+
+@media only screen and (max-width: 1080px) {
+    .paging_container {
+        width: 90%;
+    }
+    .paging_container .text {
+        font-size: 2.5vw;
+        /* 设置手机访问时的字体大小 */
+    }
+    .paging_container h1 {
+        font-size: 4vw;
+    }
+    .paging_container .time {
+        font-size: 2vw;
+    }
+    .namech {
+        font-size: 2vw;
+    }
 }
 
 .paging_btn {
